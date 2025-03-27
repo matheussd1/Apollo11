@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerenciador de Atestados</h1>
+        <div class="atestados">
+
+            <table  border=1 frame=box rules=all style="width:70%">
+            
+                <tr>
+                    <th>Data de Emissão</th>
+                    <th>PDF</th>
+                    <th>Ações</th>
+                    <th>Ínicio do Afastamento</th>
+                    <th>Fim do Afastamento</th>
+                    <th>Status</th>
+                </tr>
+                
+                <tr class="item">
+                    <td> 27/03/2025 </td>
+                    <td><a href='atestados_alunos.html'>Abrir</a></td>
+                    <td><a href='atestados_alunos.html'>Apagar</a>
+                        <a href="atestados_alunos.html">Baixar</a>
+                    </td>
+                    <td> 27/03/2025 </td>
+                    <td> 28/03/2025 </td>
+                    <td> Não Verificado </td>
+                </tr>
+
+            </table>
+        
+        </div>
+        <div class="form">
+                <h2>Adicionar Atestado</h2>
+                <form action='/atestados_alunos/index', method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+                    <input type='file' name='pdf' accept='application/pdf' required><br>
+                    Afastado de <input type='date' name='c_afastamento'> até <input type='date' name="f_afastamento"><br>
+
+                    <input type='submit' name='Adicionar Atestado'>
+                </form>
+        </div>
+    </div>
+
+</body>
+</html>
