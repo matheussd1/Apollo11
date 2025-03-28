@@ -1,0 +1,211 @@
+/*Css do Atestado de Professor*/
+.ates_prof {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    justify-self: start;
+}
+.line{
+    display: inline;
+
+}
+#caixinhas{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px;
+    border-color: black;
+    
+}
+.line>p{
+    width: 20px;
+    height: 20px;
+}
+
+#caixinhas>div{
+    padding: 20px;
+    border: 2px solid black; 
+    border-radius: 5px; 
+    width: 350px;
+    margin: 10px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#nav_ates_prof {
+    justify-self: end;
+    margin-right: 60px;
+}
+
+
+/*Css do Atestado de Alunos*/
+
+#nav_ates_aluno {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+    justify-self: right;
+    margin-right: 20px;
+ 
+}
+
+#tabela{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 80vh; 
+    margin: 0; 
+    background-color: #ffffff; 
+}
+.container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 900px; 
+    background-color: rgb(235, 235, 235); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 0 auto; 
+}
+
+th, td {
+    text-align: center; 
+    padding: 10px; 
+}
+
+
+.form {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Css do Index*/
+
+.acesse_como {
+    display: flex !important; 
+    font-size: 50px;
+    justify-content: center !important;
+    margin-top: 13%;
+    margin-left: 4%;
+}
+
+.but_index {
+    background-color: #251ca3;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3% 5% 5% 5%;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    
+    margin-bottom: 15%;
+    width: 150%;
+    height: 50%;
+
+}
+
+.but_index:hover {
+    background-color: white; 
+    color: #251ca3;
+}
+
+.corpo_home  {
+    display: grid;
+    gap: 20px 500px;   
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Css do Login de alunos*/
+
+.container3 {
+    text-align: left;
+}
+
+#h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.la_logina {
+    display: block;
+    margin-top: 20px;
+}
+
+.input_logina {
+    width: 100%;
+    padding: 8px;
+    margin-top:10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+#but_login {
+    background-color: #008000;
+    color: white;
+    justify-content: center;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom:40px;
+    margin-left: 85px;
+    display: block;
+}
+#but_login:hover {
+    background-color: #006400;
+}
+#p_login {
+    font-size: small;
+    margin-left: 10px;
+}
+
+.a_login {
+    font-weight: bold;
+}
+
+/*Css do Login de Professores*/
+
+#input_loginpro {
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 7px;
+}
+#but_loginpro {
+    font-size: 12pt;
+    display: block;
+    margin: 30px auto;
+    width: 150px;
+    height: 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-top: 33px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#login{
+    margin-bottom: 27px
+}

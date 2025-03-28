@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Professor</title>
+    <link rel="stylesheet" href="../static/css/Princi.css">
     <style>
         body {
             display: flex;
@@ -13,37 +14,16 @@
             text-align: left;
             font-family: sans-serif;
         }
-        input {
-            width: 300px;
-            height: 30px;
-            margin-top: 5px;
-            border-radius: 7px;
-        }
-        button {
-            font-size: 12pt;
-            display: block;
-            margin: 30px auto;
-            width: 150px;
-            height: 25px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            margin-top: 33px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        #login{
-            margin-bottom: 27px
-        }
+      
     </style>
 </head>
 <body>
     <div>
         <h2 id="login">Login professor</h2>
         <label for="senha">Senha</label><br>
-        <input type="password"><br>
+        <input id="input_loginpro" type="password"><br>
         <a href="atestados_professor.html">
-        <button>Acessar</button>
+        <button id="but_loginpro">Acessar</button>
         </a>
     </div>
 </body>
