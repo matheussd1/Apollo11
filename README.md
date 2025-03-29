@@ -15,8 +15,8 @@
 </br>
 
 ## 📌Objetivo do Projeto
-> Colocar o objetivo do projeto aqui :) <br>
-**Status do Projeto: Em andamento**
+> O sistema tem como meta facilitar o cadastro, consulta e gestão de atestados médicos de alunos, além de permitir a avaliação contínua de equipes ágeis em projetos de desenvolvimento de software, tudo em uma interface intuitiva e de fácil acesso.   <br>
+**Status do Projeto: Em andamento ⚙️**
 
 <br>
 
