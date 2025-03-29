@@ -21,7 +21,7 @@
 <br>
 
 ## 💡Visão do Produto
-Colocar a visão do produto aqui :)
+Para instituições acadêmicas e equipes de desenvolvimento ágil que precisam gerenciar atestados médicos de alunos e avaliar o desempenho de equipes Scrum, o **Projeto Apollo** é uma plataforma web que permite um registro eficiente e seguro de atestados e oferece uma ferramenta de avaliação contínua para equipes ágeis. Diferente de métodos manuais e descentralizados, nosso sistema centraliza as informações, garantindo praticidade, acessibilidade e maior confiabilidade nos processos.
 
 <br>
 
