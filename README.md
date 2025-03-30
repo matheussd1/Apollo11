@@ -25,18 +25,20 @@ Para instituições acadêmicas e equipes de desenvolvimento ágil que precisam 
 
 <br>
 
-## 📚Metodologia (Essa parte tá copiada e colada direto do exemplo)
+## 📚Metodologia
 
-O framework de Metodologia Ágil utilizado no produto foi o Scrum, um método ágil adaptativo, iterativo, flexível e eficaz. Entre as ferramentas utilizadas no Scrum, uma é a divisão do projeto em **Sprints**. Para selecionar quais seriam as entregas das nossas Sprints, primeiro definimos nosso **MVP**, priorizando as tarefas que trariam maior entrega de valor para o cliente. Então, a partir das Tarefas foi construído o **Backlog do Produto**,  o qual foi aprovado pelo cliente e dividido em 4 Backlog de Sprint.
+No desenvolvimento do produto, utilizamos o Scrum, um framework ágil conhecido por sua abordagem adaptativa, iterativa, flexível e eficiente. Entre as práticas adotadas dentro do Scrum, destacamos a divisão do projeto em Sprints.
 
-Dessa forma, com as Tarefas já traçadas, definimos a quantidade de tempo necessário para cada Tarefa, sendo dividido, de maneira mais otimizada, entre os Desenvolvedores do time.
+Para definir as entregas de cada Sprint, iniciamos pela definição do **MVP** (Produto Mínimo Viável), priorizando as atividades que agregassem mais valor ao cliente. A partir dessas tarefas, estruturamos o Backlog do Produto, que foi submetido à aprovação do cliente.
+
+Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas e distribuímos a execução de forma otimizada entre os desenvolvedores da equipe, garantindo um fluxo de trabalho eficiente.
 
 <br>
 
 ## 🏆**MVP**
 
 1. Wireframe: [Protótipo navegável](https://www.figma.com/design/snwp3uCdIYLKA9mw0Ymj7B/login?node-id=0-1&t=PVu3Mg1vIH0n0J8Y-1)
-2. Web Site: [Versão atual](Documents/video) (Colocar vídeo em Documents)
+2. Web Site: [Versão atual](Documents/video)
 
 <br>
 
