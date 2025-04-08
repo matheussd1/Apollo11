@@ -2,7 +2,7 @@
     background-color: #a1c8d4;
     width: 100vw;
     height: 10vh;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
     display: flex;
 }
@@ -16,9 +16,12 @@
     cursor: pointer;
     text-decoration: none;
     padding: 10px;
-    margin-left: 2%;
+    margin-right: 2%;
+    transition-duration: 0.2s;
 }
 
-.topnav a:focus{
+.topnav a:hover{
     background-color: #96a5c9;
+    padding: 12px;
+    border-radius: 5px;
 }

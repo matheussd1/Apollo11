@@ -50,6 +50,15 @@ button {
     margin: auto;
     margin-top: 10%;
     display: block;
+    transition-duration: 0.2s;
+    border: 2px solid #185c6e;
+    margin-bottom: 3%;
+}
+
+button:hover{
+    background-color: #f5f5ee;
+    color: #185c6e;
+    padding: 12px 32px;
 }
 
 p {
@@ -63,4 +72,6 @@ p {
 a {
     font-weight: bold;
     margin-left: 1%;
+    text-decoration: none;
 }
+

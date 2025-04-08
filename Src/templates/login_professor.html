@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Professor</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
     <link rel="stylesheet" href="../static/css/login.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: left;
-            font-family: sans-serif;
-        }
-      
-    </style>
+    <link rel="stylesheet" href="../static/css/main.css">
 </head>
 <body>
-    <div>
-        <h2 id="login">Login professor</h2>
-        <label for="senha">Senha</label><br>
-        <input id="input_loginpro" type="password"><br>
+
+    <nav class="topnav"> 
+        <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
+        <a href="{{ url_for('auth.professor') }}">ÁREA DE PROFESSORES ▼</a>
+        <a href="{{ url_for('auth.professor') }}">EQUIPE SCRUM ▼</a>
+    </nav>
+
+
+    <div class="login-container">
+        <h2>Login professor</h2>
+
+        <label for="senha">Senha</label>
+        <input id="input_loginpro" type="password">
         <a href="atestados_professor.html">
         <button id="but_loginpro">Acessar</button>
         </a>
