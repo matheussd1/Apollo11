@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+{% block head %}
     <title>Página Inicial</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
     <link rel="stylesheet" href="../static/css/index.css">
-    <link rel="stylesheet" href="../static/css/main.css">
-   
-</head>
+{% endblock %}
 
-<body>
-
-    <nav class="topnav"> 
-        <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
-        <a href="{{ url_for('auth.professor') }}">ÁREA DE PROFESSORES ▼</a>
-        <a href="{{ url_for('auth.professor') }}">EQUIPE SCRUM ▼</a>
-    </nav>
-
+{% block body %}
     <h1>Acesse como: </h1>
     <div class="corpo-home"> 
         
@@ -34,5 +22,4 @@
         </a>
 
     </div>
-</body>
-</html>
+{% endblock %}

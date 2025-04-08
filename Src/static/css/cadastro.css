@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    font-family: Roboto Slab;
+    background-color: #185c6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    color: #f5f5ee;
+}
+
+
+.cadastro{
+    border-radius: 2%;
+    background-color: #f5f5ee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #185c6e;
+    width: 30vw;
+}
+
+.cadastro form:not(h3) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cadastro form input[type=password], input[type=text]{
+    border: 2px solid #185c6e;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0px 0 0 0px;
+    width: 70%;
+    font-size: medium;
+}
+
+.cadastro form input[type=submit]{
+    border-radius: 20px;
+    border: 2px solid #185c6e;
+    background-color:  #185c6e;
+    color: #f5f5ee;
+    padding: 12px 10px 12px 10px;
+    margin: 10px 0 25px 0px;
+    text-align: center;
+    width: 75%;
+    font-size: medium;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.cadastro form input[type=submit]:hover{
+    background-color: #f5f5ee;
+    color: #185c6e;
+    padding: 14px 12px;
+}
