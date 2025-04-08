@@ -1,0 +1,24 @@
+.topnav{
+    background-color: #a1c8d4;
+    width: 100vw;
+    height: 10vh;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+
+.topnav a {
+    background-color: transparent;
+    border: 0px;
+    color: #f4f3f6;
+    font-size: larger;
+    font-family: Roboto Slab;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 2%;
+}
+
+.topnav a:focus{
+    background-color: #96a5c9;
+}

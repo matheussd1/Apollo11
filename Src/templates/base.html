@@ -3,36 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <link rel="stylesheet" href="../static/css/index.css">
-    <link rel="stylesheet" href="../static/css/main.css">
-   
+    <link rel="stylesheet" href="../static/css/base.css">
+    {% block head %}{% endblock %}
 </head>
-
 <body>
-
     <nav class="topnav"> 
         <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
         <a href="{{ url_for('auth.professor') }}">ÁREA DE PROFESSORES ▼</a>
         <a href="{{ url_for('auth.professor') }}">EQUIPE SCRUM ▼</a>
     </nav>
-
-    <h1>Acesse como: </h1>
-    <div class="corpo-home"> 
-        
-        <a href="login_aluno.html">
-            <button>Aluno</button>
-        </a>
-
-        <a href="login_professor.html">
-            <button>Professor</button>
-        </a>
-
-        <a href="equipe_agil.html">
-            <button>Equipe Ágil</button>
-        </a>
-
-    </div>
+    {% block body %}{% endblock %}
 </body>
 </html>

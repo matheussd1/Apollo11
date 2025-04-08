@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    font-family: Roboto Slab;
+    background-color: #185c6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: #f5f5ee;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 7%;
+}
+
+button{
+    background-color: #185c6e;
+    color: #f5f5ee;
+    font-size: large;
+
+    padding: 20px 100px;
+
+    width: 30vw;
+    border-radius: 20px;
+
+    border: 2px solid;
+    margin: 10px 0;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+button:hover{
+    background-color: #f5f5ee;
+    color:#185c6e;
+    padding: 22px 102px;
+}
+
+.corpo-home{
+    border-radius: 20px;
+    background-color: #f5f5ee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #185c6e;
+    width: 40vw;
+    height: 40vh;
+}

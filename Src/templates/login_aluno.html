@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Aluno</title>
-    <link rel="stylesheet" href="../static/css/Princi.css">
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fff;
-        }
-
-    </style>
-
+    <title>Página Inicial</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+       
 </head>
+
 <body>
 
-    <div class="Container3">
-    <h2 id="h2">Login Aluno</h2>
+    <nav class="topnav"> 
+        <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
+        <a href="{{ url_for('auth.professor') }}">ÁREA DE PROFESSORES ▼</a>
+        <a href="{{ url_for('auth.professor') }}">EQUIPE SCRUM ▼</a>
+    </nav>
 
-    <label class="la_logina">RA</label>
-    <input class="input_logina" type="number">
-    
-    <label class="la_logina">Senha</label>
-    <input class="input_logina" type="password">
-    
-    <a class="a_login" href="atestados_alunos.html"><button id="but_login">Acessar</button></a>
+    <div class="login-container">
+        <h2>Login Aluno</h2>
 
-    <p id="p_login">
-    Ainda não possui uma conta?
-    <a class="a_login" href="cadastro_aluno.html">Cadastre-se!</a>
-    </p>
+        <label class="la_logina">RA</label>
+        <input class="input_logina" type="text">
+        
+        <label class="la_logina">Senha</label>
+        <input class="input_logina" type="password">
+        
+        <a class="a_login" href="atestados_alunos.html"><button>Acessar</button></a>
+
+        <p>
+        Ainda não possui uma conta?
+        <a class="a_login" href="cadastro_aluno.html">Cadastre-se!</a>
+        </p>
     </div>
     
 </body>
