@@ -2,7 +2,7 @@
     background-color: #a1c8d4;
     width: 100vw;
     height: 10vh;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     display: flex;
 }
@@ -16,7 +16,6 @@
     cursor: pointer;
     text-decoration: none;
     padding: 10px;
-    margin-right: 2%;
     transition-duration: 0.2s;
 }
 
@@ -24,4 +23,10 @@
     background-color: #96a5c9;
     padding: 12px;
     border-radius: 5px;
+}
+
+a {
+    font-weight: bold;
+    margin-left: 1%;
+    text-decoration: none;
 }

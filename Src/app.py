@@ -1,33 +1,19 @@
 from flask import Flask, render_template
+from routes.atestados_professor import professor
+from routes.atestados_alunos import atestados_alunos
+from routes.auth import auth
+
 
 app = Flask(__name__)
 
+app.register_blueprint(auth, url_prefix='/auth')
+app.register_blueprint(atestados_alunos, url_prefix='/atestados_alunos')
+app.register_blueprint(professor, url_prefix='/professor')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
-
-@app.route('/login_aluno')
-def login_aluno():
-    return render_template('login_aluno.html')
-
-
-@app.route('/login_professor')
-def login_professor():
-    return render_template('login_professor.html')
-
-
-@app.route('/cadastro_aluno')
-def cadastro_aluno():
-    return render_template('cadastro_aluno.html')
-
-
-@app.route('/atestados_alunos')
-def atestados_alunos():
-    return render_template('atestados_alunos.html')
-
-
-@app.route('/atestados_professor')
-def atestados_professor():
-    return render_template('atestados_professor.html')

@@ -9,9 +9,9 @@
 </head>
 <body>
     <nav class="topnav"> 
-        <a href="{{ url_for('login_aluno') }}">ÁREA DOS ALUNOS ▼</a>
-        <a href="{{ url_for('login_professor') }}">ÁREA DE PROFESSORES ▼</a>
-        <a href="{{ url_for('login_aluno') }}">EQUIPE SCRUM ▼</a>
+        <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
+        <a href="{{ url_for('auth.login_professor') }}">ÁREA DE PROFESSORES ▼</a>
+        <a href="{{ url_for('auth.login') }}">EQUIPE SCRUM ▼</a>
     </nav>
     {% block body %}{% endblock %}
 </body>

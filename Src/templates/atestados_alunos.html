@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/Princi.css">
-    <title>Atestaedos Alunos</title>
+{% extends 'base.html' %}
 
-</head>
-<body>
-    
-    <nav id="nav_ates_aluno">
-        <p>
-            <a href="index.html" style="font-size: 27px;">Sair</a>
-        </p>
-    </nav>
-    
-    <section id="tabela">
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/atestados_alunos.css') }}">
+{% endblock %}
+
+
+{% block body %}
     <div class="container">
-        <h1>Gerenciador de Atestados</h1>
         <div class="atestados">
+            <h1>Gerenciador de Atestados</h1>
 
             <table  border=1 frame=box rules=all style="width:70%">
             
@@ -32,30 +23,27 @@
                 </tr>
                 
                 <tr class="item">
-                    <td> 27/03/2025 </td>
-                    <td><a href='atestados_alunos.html'>Abrir</a></td>
-                    <td><a href='atestados_alunos.html'>Apagar</a>
-                        <a href="atestados_alunos.html">Baixar</a>
-                    </td>
-                    <td> 27/03/2025 </td>
-                    <td> 28/03/2025 </td>
-                    <td> Não Verificado </td>
+                    <td> 15/11/2006 </td>
+                    <td><a href="{{ url_for('atestados_alunos.index')}}" target="_blank">Abrir</a></td>
+                    <td><a href='{{ url_for("atestados_alunos.index") }}'>Apagar</a>
+                        <a href="{{ url_for('atestados_alunos.index') }}">Baixar</a>
+                    </th>
+                    <td>15/11/2006</td>
+                    <td>18/11/2006</td>
+                    <td>Não Verificado</td>
                 </tr>
-
             </table>
-        
+
         </div>
         <div class="form">
-                <h2>Adicionar Atestado</h2>
-                <form action='/atestados_alunos/index', method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
-                    <input type='file' name='pdf' accept='application/pdf' required><br>
-                    Afastado de <input type='date' name='c_afastamento'> até <input type='date' name="f_afastamento"><br>
-
-                    <input type='submit' name='Adicionar Atestado'>
-                </form>
+        <h2>Adicionar Atestado</h2>
+        <form action='/atestados_alunos/index', method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+            <input type='file' name='pdf' accept='application/pdf' class='upload-input' required>
+            Afastado de <input type='date' name='c_afastamento'> até <input type='date' name="f_afastamento">
+    
+            <input type='submit' name='Adicionar Atestado'>
+        </form>
         </div>
     </div>
-</section>
 
-</body>
-</html>
+{% endblock %}

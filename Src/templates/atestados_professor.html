@@ -1,89 +1,42 @@
-<!DOCTYPE html>
-<html >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atestados Professor</title>
-    <link rel="stylesheet" href="../static/css/Princi.css">
-</head>
-<body>
-    <div class="container2">
-        <form id="ates_prof">
-            <input type="text" placeholder="Insira o RA/nome do aluno" style="height: 25px;" size="30px">
-            <button type="submit" style="margin-left: 5px;">
-                <img src="../static/css/images/search_icon.png" alt="Lupa" style="width: 20px; height: 20px;">
-            </button>
-            <label for="inF" style="font-size: 27px;">Classificar por: </label>
-            <select name="inF" id="inF" style="background-color: #E1E1E1;">
-                <option value="Data de envio">Data de envio</option>
-                <option value="Ordem alfabética">Ordem alfabética</option>
-                <option value="Ordem núemrica de Ra">Ordem númerica</option>
-                <option value="Situação">Situação do atestado</option>
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/atestados_professor.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+     <nav class="search-container">
+        <form  method="POST" accept-charset="UTF-8">
+            <input type="text" placeholder="Pesquisar Nome/RA" name="Pesquisar">
+            <button type="submit"> <i class="fa fa-search"></i></button>
+                
+            <label for="classificar">Classificar por:</label>
+            <select name="classificar">
+                <option value="upload">Data de Upload</option>
+                <option value="i_afastamento">Ínicio do Afastamento</option>
+                <option value="f_afastamento">Fim do Afastamento</option>
+                <option value="alfabetica">Ordem Alfabética</option>
+
             </select>
+
         </form>
-        <nav id="nav_ates_prof">
-            <p>
-                <a href="index.html" style="font-size: 27px;">Sair</a>
-            </p>
-        </nav>
-    </div>
-    <section id="caixinhas">
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-        <div>
-            <p>Nome:</p>
-            <p>RA:</p>
-            <p>Data de Emissão:</p>
-            <p>Data início de afastamento:</p>
-            <p>Data de Retorno:</p>
-            <p>Situação:</p>
-            <p class="line" style="margin-right: 15px;">abrir pdf</p><p class="line">Baixar pdf</p>
-        </div>
-      
-    </section>
+    </nav>
     
-</body>
-</html>
+
+    <section class="resultado-pesquisa">
+                    <article class="item-pesquisa">
+                        <h3>Nome: Caio César dos Santos</h3>
+                        <h3>RA: 0001098206411 </h3>
+                        <h3>Status:
+                            <a>Deferir</a>
+                            <a>Indeferir</a>
+                        </h3>
+                        <h3>Data de Upload: 18/11/2025 </h3>
+                        <h3>Ínicio do Afastamento: 18/11/2025 </h3>
+                        <h3>Fim do Afastamento: 20/11/2025 </h3>
+                        <a>Abrir PDF</a>
+                        <a>Baixar PDF</a><br>
+                    </article>
+    </section>
+{% endblock %}

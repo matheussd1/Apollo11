@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    font-family: Roboto Slab;
+    background-color: #185c6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5ee;
+}
+
+
+.container{
+    border-radius: 20px;
+    background-color: #f4f3f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #185c6e;
+    width: 90vw;
+    height: 80vh;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .atestados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    display: flex;
+    font-weight: 700;
+}
+
+.upload-input::file-selector-button {
+    border: 0;
+    border-radius: 20px;
+    background-color: #185c6e;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 15px;
+    color: #f5f5ee;
+    cursor: pointer;
+}
+
+
+
+table {
+    border: 2px solid #185c6e;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+th, td {
+    padding: 10px 18px;
+    font-size: medium;
+}
+
+
+a {
+    color: #185c6e;
+    font-size: medium;
+}
+
+.container form input[type=submit]{
+    border-radius: 20px;
+    border: 0px;
+    background-color:  #185c6e;
+    color: #f4f3f6;
+    padding: 12px 10px 12px 10px;
+    margin: 10px 0 25px 0px;
+    text-align: center;
+    width: 75%;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.container form input[type=submit]:focus{
+    border: 5px
+}
+
+.atestados { 
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+} 

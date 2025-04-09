@@ -9,15 +9,15 @@
     <h1>Acesse como: </h1>
     <div class="corpo-home"> 
         
-        <a href="login_aluno.html">
+        <a href="{{ url_for('auth.login') }}">
             <button>Aluno</button>
         </a>
 
-        <a href="login_professor.html">
+        <a href="{{url_for('auth.login_professor')}}">
             <button>Professor</button>
         </a>
 
-        <a href="equipe_agil.html">
+        <a href="{{url_for('auth.login')}}">
             <button>Equipe Ágil</button>
         </a>
 

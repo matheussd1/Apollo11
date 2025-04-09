@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    font-family: Roboto Slab;
+    background-color: #185c6e;
+    color: #f5f5ee;
+}
+
+
+.resultado-pesquisa{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-pesquisa{
+    border-radius: 20px;
+    background-color: #f4f3f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 3%; 
+    color: #185c6e;
+
+    min-width: 20vw;
+    min-height: 38vh;
+
+    max-width: 25vw;
+    max-height: 38vh;
+
+    margin: 10px;
+    font-size: small;
+}
+
+h3, .item-pesquisa a{
+    margin-left: 5%;
+    color: #185c6e;
+    font-size: medium;
+    font-weight: 700;
+}
+
+
+.search-container form{
+    margin: 10px;
+}
+
+input[type="text"]{
+    border-radius: 20px;
+    padding: 10px;
+    width: 20%;
+    font-size: medium;
+    font-weight: 700;
+    color:#185c6e;
+    padding-left: 20px;
+    background-color: #f4f3f6;
+}
+
+input[type="text"]{
+    width: 40%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+button i.fa {
+    font-size: xx-large;
+    color: #f4f3f6;
+}
+
+label{
+    color: #f4f3f6;
+    font-size: larger;
+    padding: 10px;
+}
+
+select, option{
+    border-radius: 10px;
+    padding: 5px;
+    width: 20%;
+    font-size: medium;
+    font-weight: 700;
+    color:#185c6e;
+    padding-left: 20px;
+    background-color: #f4f3f6;
+}
+
+select:focus{
+    border: none;
+}

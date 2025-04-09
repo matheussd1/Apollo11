@@ -15,11 +15,11 @@
         <label class="la_logina">Senha</label>
         <input class="input_logina" type="password">
         
-        <a class="a_login" href="{{ url_for('atestados_alunos') }}"><button>Acessar</button></a>
+        <a class="a_login" href="{{ url_for('atestados_alunos.index') }}"><button>Acessar</button></a>
 
         <p>
         Ainda não possui uma conta?
-        <a class="a_login" href="{{ url_for('cadastro_aluno') }}">Cadastre-se!</a>
+        <a class="a_login" href="{{ url_for('auth.cadastro_aluno') }}">Cadastre-se!</a>
         </p>
     </div>
 {% endblock %}
