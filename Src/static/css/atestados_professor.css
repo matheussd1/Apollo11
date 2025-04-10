@@ -49,9 +49,10 @@ input[type="text"]{
     color:#185c6e;
     padding-left: 20px;
     background-color: #f4f3f6;
+    transition-duration: 0.3s;
 }
 
-input[type="text"]{
+input[type="text"]:hover{
     width: 40%;
 }
 

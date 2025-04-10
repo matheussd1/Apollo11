@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+
+        <h1>Cadastro de Equipes Ágeis</h1>
+        
+        <h2>Você ainda não cadastrou sua equipe.</h2>
+
+        <a href="{{ url_for('scrum_master.cadastro') }}">Cadastrar Agora</a>
+
+    </div>
+
+{% endblock %}

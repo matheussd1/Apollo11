@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    font-family: Roboto Slab;
+    background-color: #185c6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5ee;
+}
+
+
+.container{
+    border-radius: 20px;
+    background-color: #f5f5ee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #185c6e;
+    width: 90vw;
+    height: 80vh;
+}
+
+
+.container a {
+    border-radius: 20px;
+    color: #f5f5ee;
+    border: 3px solid #185c6e;
+    background-color: #185c6e;
+    padding: 8px;
+    transition-duration: 0.2s;
+    font-size: medium;
+}
+
+.container a:hover{
+    color: #185c6e;
+    padding: 10px;
+    background-color: #f5f5ee;
+}

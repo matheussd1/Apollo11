@@ -11,7 +11,8 @@
     <nav class="topnav"> 
         <a href="{{ url_for('auth.login') }}">ÁREA DOS ALUNOS ▼</a>
         <a href="{{ url_for('auth.login_professor') }}">ÁREA DE PROFESSORES ▼</a>
-        <a href="{{ url_for('auth.login') }}">EQUIPE SCRUM ▼</a>
+        <a href="{{ url_for('scrum.index') }}">EQUIPE SCRUM ▼</a>
+        <a href="{{ url_for('scrum_master.index') }}">SCRUM MASTER ▼</a>
     </nav>
     {% block body %}{% endblock %}
 </body>
