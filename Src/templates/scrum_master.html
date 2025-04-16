@@ -2,11 +2,28 @@
 
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum_master.css') }}">
 {% endblock %}
 
 
 {% block body %}
+
+    {% if not logado %}
+    <div class="login-container">
+        <h2>Login Scrum Master</h2>
+
+        <form action="/scrum_master/login" method="post" accept-charset="UTF-8">
+            
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
+
+            <input type="submit" name="logar" placeholder="Acessar">
+
+        </form>
+
+    </div>
+    {% else %}
+
     <div class="container">
 
         <h1>Cadastro de Equipes Ágeis</h1>
@@ -16,5 +33,6 @@
         <a href="{{ url_for('scrum_master.cadastro') }}">Cadastrar Agora</a>
 
     </div>
+    {% endif %}
 
 {% endblock %}

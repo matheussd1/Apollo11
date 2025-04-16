@@ -1,26 +1,8 @@
 from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app
 import os, json
+from utils.helpers import salvar_aluno, carregar_alunos
 
 auth = Blueprint('auth', __name__)
-
-USUARIOS_JSON = 'usuarios.json'
-
-def salvar_aluno(alunos):
-
-    if not os.path.exists(USUARIOS_JSON):
-        return []
-
-    with open(USUARIOS_JSON, 'w', encoding='utf-8') as file:
-        json.dump(alunos, file, indent=4, ensure_ascii=False)
-
-
-def carregar_alunos():
-    if not os.path.exists(USUARIOS_JSON):
-        return []
-    
-
-    with open(USUARIOS_JSON, 'r', encoding='utf-8') as file:
-        return json.load(file)
 
 @auth.route('/login')
 def login():
@@ -38,7 +20,11 @@ def cadastro_aluno():
     if request.method == 'POST':
         dados = {'nome': request.form['nome'],
                  'ra': request.form['ra'],
-                 'senha': request.form['senha']}
+                 'senha': request.form['senha'],
+                 'num_atestados': 0,
+                 'atestados': {},
+                 'equipe': 'Nenhuma',
+                 'scrum_master': False}
 
 
         alunos = carregar_alunos()

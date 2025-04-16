@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "nome": "Caio César dos Santos",
+        "ra": "0001098206411",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "scrum_master": false
+    },
+    {
+        "nome": "João",
+        "ra": "123",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "scrum_master": true
+    }
+]
