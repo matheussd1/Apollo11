@@ -6,17 +6,17 @@
 
 {% block body%}
     <div class='cadastro'>
-        <form action="/auth/cadastro" method="POST" accept-charset="UTF-8">
+        <form action="/auth/cadastro_aluno" method="POST" accept-charset="UTF-8">
             <h1>Cadastro de Alunos</h1>
             
             <h3>Nome de Usuário: </h3>
-            <input type="text" name="username" required><br>
+            <input type="text" name="nome" required><br>
             
             <h3>RA do Aluno: </h3>
-            <input type="text" name="RA" required><br>
+            <input type="text" name="ra" required><br>
             
             <h3>Senha: </h3>
-            <input type="password" name="password" required><br>
+            <input type="password" name="senha" required><br>
 
             <input type="submit" value="Confirmar Cadastro"><br>
         </form>

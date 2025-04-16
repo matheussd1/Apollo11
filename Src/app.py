@@ -16,7 +16,7 @@ app.register_blueprint(scrum_master, url_prefix="/scrum_master")
 
 
 app.config['RA_ATUAL'] = '123'
-
+app.config['SENHA_PROF'] = '123'
 
 if __name__ == "__main__":
     app.run(debug=True)
