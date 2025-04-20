@@ -1,0 +1,11 @@
+[
+    {
+        "nome": "João",
+        "ra": "123",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "Scrum Master"
+    }
+]

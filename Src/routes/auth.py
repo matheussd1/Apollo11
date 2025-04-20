@@ -24,7 +24,7 @@ def cadastro_aluno():
                  'num_atestados': 0,
                  'atestados': {},
                  'equipe': 'Nenhuma',
-                 'scrum_master': False}
+                 'função': 'DevTeam'}
 
 
         alunos = carregar_alunos()

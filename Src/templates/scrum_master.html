@@ -24,15 +24,30 @@
     </div>
     {% else %}
 
-    <div class="container">
+        {% if dados_usuario.equipe == 'Nenhuma' %}
 
-        <h1>Cadastro de Equipes Ágeis</h1>
-        
-        <h2>Você ainda não cadastrou sua equipe.</h2>
+        <div class="login-container">
+            <h2>Nome da sua equipe: </h2>
+            
+            <form action="/scrum_master/definir_nome" method='post' accept-charset="UTF-8">
+                <input type="text" name="nome-equipe">
+                <input type="submit" name="confirmar" placeholder="confirmar">
+            </form>
 
-        <a href="{{ url_for('scrum_master.cadastro') }}">Cadastrar Agora</a>
+        </div>
+        {% else %}
 
-    </div>
+        <section class="lista-de-membros">
+
+            <div class="membro">
+                <h1>{{dados_usuario.nome}} - {{dados_usuario.função}}</h1>
+                <h2>RA: {{dados_usuario.ra}}</h2>
+
+                <h2>Nome da Equipe: <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h2>
+            </div>
+
+        </section>
+        {% endif %}
     {% endif %}
 
 {% endblock %}
