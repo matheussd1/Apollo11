@@ -27,7 +27,7 @@ body, html {
     margin-left: 15px;
 }
 
-label {
+.login-container label {
     display: block;
     margin: 20px 0 0 15px;
     font-weight: bold;  
@@ -66,7 +66,7 @@ label {
     background-color: #f5f5ee;
 }
 
-.lista-de-membros{
+.container{
     border-radius: 20px;
     background-color: #f5f5ee;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

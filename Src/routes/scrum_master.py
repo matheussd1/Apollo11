@@ -28,12 +28,8 @@ def login():
     
     return render_with_info()
 
-
 @scrum_master.route('/definir_nome', methods=['GET', 'POST'])
 def definir_nome():
-    
-    if request.method == 'GET':
-        mudar_valor(current_app.config['RA_ATUAL'], 'equipe', 'Nenhuma')
 
     if request.method == 'POST':
 
@@ -42,19 +38,13 @@ def definir_nome():
         equipes = carregar_equipes()
 
         for equipe in equipes:
-            if equipe['nome'] == nome_equipe:
+            if equipe == nome_equipe:
                 return render_with_info()
 
         mudar_valor(current_app.config['RA_ATUAL'], 'equipe', nome_equipe)
 
-
-        if not [equipe for equipe in equipes if equipe['nome'] == nome_equipe]:
-            equipes.append({'nome': nome_equipe,
-                           'num_membros': 1,
-                           'membros': {}})
-            salvar_equipe(equipes)
-        else:
-            pass
+        equipes[nome_equipe] = {'num_membros': 1, 'membros': {}}
+        salvar_equipe(equipes)
 
     return render_with_info()
 

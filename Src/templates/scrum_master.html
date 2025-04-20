@@ -37,16 +37,43 @@
         </div>
         {% else %}
 
-        <section class="lista-de-membros">
+    
+        <section class="container">
 
             <div class="membro">
                 <h1>{{dados_usuario.nome}} - {{dados_usuario.função}}</h1>
                 <h2>RA: {{dados_usuario.ra}}</h2>
-
-                <h2>Nome da Equipe: <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h2>
+                <h2>Nome da Equipe: <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h2>   
             </div>
 
+            <h2>Adicionar Membro: </h2>
+
+            <form action="scrum_master/adicionar_membro" method="POST" accept-charset="UTF-8">
+                <label for="nome-aluno">Membro: </label>
+                <select name="nome-aluno"   >
+                    <option value="" disabled selected hidden>Escolha um aluno</option>
+                    {% for aluno in alunos %}
+                        {% if aluno.equipe == 'Nenhuma' %}
+                            <option value="aluno-{{ loop.index }}">{{aluno.nome}} - {{aluno.ra}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+
+                <label for="função">Função: </label>
+                <select name="função">
+                    <option value="devteam">DevTeam</option>
+                    <option value="scrum_master">Scrum Master</option>
+                    <option value="PO">Product Owner</option>
+
+                </select>
+
+
+            </form>
+
         </section>
+
+
+
         {% endif %}
     {% endif %}
 

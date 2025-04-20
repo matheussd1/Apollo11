@@ -5,7 +5,25 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Baltazar",
         "função": "Scrum Master"
+    },
+    {
+        "nome": "Caio César dos Santos",
+        "ra": "1234",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "DevTeam"
+    },
+    {
+        "nome": "Elizabete Baltazar",
+        "ra": "143",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "DevTeam"
     }
 ]
