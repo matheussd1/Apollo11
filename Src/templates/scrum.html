@@ -7,11 +7,34 @@
 
 
 {% block body %}
-    <div class="container">
-        <h1>Avaliação da Equipe Scrum</h1>
-        
-        <h2>Você não está em uma equipe ainda. Aguarde que o Scrum Master da sua equipe te cadastre!</h2>
 
-    </div>
+    {% if dados_usuario.equipe == 'Nenhuma' %}
+        <div class="container">
+            <h1>Avaliação da Equipe Scrum</h1>
+            
+            <h2>Você não está em uma equipe ainda. Aguarde que o Scrum Master da sua equipe te cadastre!</h2>
+        </div>
+    {% else %}
+        <section class="container">
+            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s)</h1>   
+            
+                <article class="lista-de-membros">
+                    
+                    <div class="membro">
+                        <h2>{{dados_usuario.nome}} / {{dados_usuario.ra}} - {{dados_usuario.função}}</h2>
+                        <div class="notas">
+                            {% for nota in dados_usuario.notas %}
+                                <h3>{{nota}}: 0</h3>
+                            {% endfor %}
+                        </div>
+                    </div>
 
+                    {% for membro in equipe.membros %}
+                        {% if membro != dados_usuario.ra %}
+
+                        {% endif %}
+
+                    {% endfor %}
+                </article>
+    {% endif %}
 {% endblock %}

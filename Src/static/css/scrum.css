@@ -10,33 +10,42 @@ body, html {
 }
 
 
+h1{
+    font-size: 1.8em;
+    text-align: center;
+}
+
 .container{
-    border-radius: 20px;
-    background-color: #f5f5ee;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 3%;
+    width: 100vw;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #185c6e;
-    width: 90vw;
-    height: 80vh;
+}
+
+.lista-de-membros{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
-.container a {
-    border-radius: 20px;
-    color: #f5f5ee;
-    border: 3px solid #185c6e;
-    background-color: #185c6e;
-    padding: 8px;
-    transition-duration: 0.2s;
-    font-size: medium;
+.membro {
+    background-color: #f5f5ef;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 1%;
+    color : #185c6e;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    max-width: 30%;
+    font-family: Roboto Slab;
+    font-size: large;
+    font-weight: bold;
 }
 
-
-.container a:hover{
-    color: #185c6e;
-    padding: 10px;
-    background-color: #f5f5ee;
+.membro:hover {
+    transform: scale(1.01);
 }

@@ -1,10 +1,10 @@
 {
     "Baltazar": {
-        "num_membros": 1,
+        "num_membros": 3,
         "votação": false,
         "membros": [
-            "0123456789123",
-            "12345",
+            "123",
+            "223",
             "1234567890123"
         ]
     }

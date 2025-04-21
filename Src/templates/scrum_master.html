@@ -38,19 +38,14 @@
         {% else %}
 
         <section class="container">
-        <h1>Equipe <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h1>   
+        <h1>Equipe <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a> - {{equipe.num_membros}} Integrante(s)</h1>   
         
             <article class="lista-de-membros">
-                <div class="membro">
-                    <h2>{{dados_usuario.nome}} - {{dados_usuario.função}}</h2>
-                    <h2>RA: {{dados_usuario.ra}}</h2>
-                </div>
-
                 {% for membro in equipe.membros %}
 
                     <div class="membro">
                         <h2>{{pegar_valor(membro, 'nome')}} - {{pegar_valor(membro, 'função')}}</h2>
-                        <h2>RA: {{dados_usuario.ra}}</h2>
+                        <h2>RA: {{pegar_valor(membro, 'ra')}}</h2>
                     </div>
 
                 {% endfor %}

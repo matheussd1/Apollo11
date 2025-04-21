@@ -49,7 +49,7 @@ def definir_nome():
 
         mudar_valor(current_app.config['RA_ATUAL'], 'equipe', nome_equipe)
 
-        equipes[nome_equipe] = {'num_membros': 1, "votação": False, 'membros': []}
+        equipes[nome_equipe] = {'num_membros': 1, "votação": False, 'membros': [usuario_atual()['ra']]}
         salvar_equipe(equipes)
 
     return redirect(url_for('scrum_master.index'))
@@ -64,6 +64,7 @@ def adicionar_membro():
 
         equipes = carregar_equipes()
         equipes[equipe_atual()]['membros'].append(request.form['ra-aluno'])
+        equipes[equipe_atual()]['num_membros'] = len(equipes[equipe_atual()]['membros'])
         salvar_equipe(equipes)
 
         return redirect(url_for('scrum_master.index'))
