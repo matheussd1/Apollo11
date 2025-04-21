@@ -1,29 +1,92 @@
 [
     {
-        "nome": "João",
+        "nome": "Caio César dos Santos",
         "ra": "123",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
         "equipe": "Baltazar",
-        "função": "Scrum Master"
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
     },
     {
-        "nome": "Caio César dos Santos",
+        "nome": "Elizabete Baltazar",
+        "ra": "223",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "Miguel Duarte",
         "ra": "1234",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
         "equipe": "Nenhuma",
-        "função": "DevTeam"
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
     },
     {
-        "nome": "Elizabete Baltazar",
-        "ra": "143",
+        "nome": "Heitor Galvão",
+        "ra": "12345",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
-        "função": "DevTeam"
+        "equipe": "Baltazar",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "João",
+        "ra": "0123456789123",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Baltazar",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "Tralalero Tralala",
+        "ra": "1234567890123",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Baltazar",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
     }
 ]

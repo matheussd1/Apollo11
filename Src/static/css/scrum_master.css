@@ -23,7 +23,6 @@ body, html {
 .login-container h2 {
     font-weight: bold;
     margin-bottom: 40px;
-    font-size: xx-large;
     margin-left: 15px;
 }
 
@@ -66,24 +65,101 @@ body, html {
     background-color: #f5f5ee;
 }
 
+h1{
+    font-size: 1.8em;
+    text-align: center;
+}
+
 .container{
-    border-radius: 20px;
-    background-color: #f5f5ee;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 3%;
+    width: 100vw;
+    height: 70vh;
+}
+
+.lista-de-membros{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #185c6e;
-    width: 90vw;
-    height: 80vh;
+    max-height: 48vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #185c6e #f5f5f5;
+    overflow-x: hidden;
 }
 
-.membro{
-    background-color: #185c6e;
-    width: 96%;
-    margin-top: 2%;
-    padding-left: 10px;
+
+.adicionar-membro{
+    font-weight: bold;
+    font-size: larger;
+    width: 60%;
+    height: 20%;
+    display: grid;
+    padding: 10px;
+    background-color: #f5f5ee;
+    border: 2px solid #185c6e;
     border-radius: 20px;
-    color: #f5f5ee;
+    align-items: left;
+    margin-left: 0.8%;
+    position: fixed;
+    bottom: 6%;
+    left: 0;
 }
+
+.adicionar-membro{
+    color: #185c6e;
+}
+
+.adicionar-membro select{
+    margin-right: 20px;
+    border: 2px solid #185c6e;
+    border-radius: 10px;
+    padding: 3px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    color: #185c6e;
+}
+
+.adicionar-membro input {
+    background-color: #185c6e;
+    color: #f5f5ee;
+    border: 3px solid #f5f5ee;
+    padding: 10px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.adicionar-membro input:hover{
+    background-color: #f5f5ee;
+    color: #185c6e;
+    border: 3px solid #185c6e;
+    padding: 12px 32px;
+    transform: scale(1.01);
+}
+
+option{
+    font-weight: bolder;
+}
+
+.membro {
+    background-color: #f5f5ef;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    color : #185c6e;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    width: 96%;
+    font-family: Roboto Slab;
+    font-size: large;
+    font-weight: bold;
+}
+.membro:hover {
+    transform: scale(1.01);
+}
+
+a{
+    color: #f5f5ee;
+} 

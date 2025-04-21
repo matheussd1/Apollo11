@@ -35,6 +35,12 @@ def mudar_valor(ra, valor, novo_valor):
         
     salvar_aluno(alunos)
 
+def pegar_valor(ra, valor):
+    alunos = carregar_alunos()
+    for i, aluno in enumerate(alunos):
+        if aluno['ra'] == ra:
+            return aluno[valor]
+    return []
 
 # EQUIPES ÁGEIS
 def carregar_equipes():
@@ -47,14 +53,13 @@ def carregar_equipes():
 def adicionar_membro(nome_equipe, membro, função):
     equipes = carregar_equipes()
     
-    for i, equipe in enumerate(equipes):
-        if equipe['nome'] == nome_equipe:
-            equipe['num_membros'] += 1
-            # equipe['membros']['membro_0'+str(equipe['num_membros'])] = {'nome': '',
-            #                                                             'função': '',
-            #                                                             'notas': {}}
-            equipe['membros']['membro_0'+str(equipe['num_membros'])].update({'nome': membro,
-                                                                            'função': função})
+    for aluno in carregar_alunos():
+        if aluno.ra == membro:
+            nome = aluno.nome
+
+    for equipe in equipes:
+        if equipe == nome_equipe:
+            equipes[equipe]['membros'][membro] = {}
 
 def salvar_equipe(equipe):
     if not os.path.exists(EQUIPES_JSON):
@@ -62,3 +67,9 @@ def salvar_equipe(equipe):
 
     with open(EQUIPES_JSON, 'w', encoding='utf-8') as file:
         json.dump(equipe, file, indent=4, ensure_ascii=False)
+
+def equipe_atual():
+    for equipe in carregar_equipes():
+        if equipe == usuario_atual()['equipe']:
+            return equipe
+    return []

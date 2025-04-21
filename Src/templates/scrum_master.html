@@ -37,39 +37,51 @@
         </div>
         {% else %}
 
-    
         <section class="container">
+        <h1>Equipe <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h1>   
+        
+            <article class="lista-de-membros">
+                <div class="membro">
+                    <h2>{{dados_usuario.nome}} - {{dados_usuario.função}}</h2>
+                    <h2>RA: {{dados_usuario.ra}}</h2>
+                </div>
 
-            <div class="membro">
-                <h1>{{dados_usuario.nome}} - {{dados_usuario.função}}</h1>
-                <h2>RA: {{dados_usuario.ra}}</h2>
-                <h2>Nome da Equipe: <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a></h2>   
+                {% for membro in equipe.membros %}
+
+                    <div class="membro">
+                        <h2>{{pegar_valor(membro, 'nome')}} - {{pegar_valor(membro, 'função')}}</h2>
+                        <h2>RA: {{dados_usuario.ra}}</h2>
+                    </div>
+
+                {% endfor %}
+
+            </article>
+
+            <div class="adicionar-membro">
+                <h2>Adicionar Membro: </h2>
+
+                <form action="/scrum_master/adicionar_membro" method="POST" accept-charset="UTF-8">
+                    <label for="ra-aluno">Membro: </label>
+                    <select name="ra-aluno" required>
+                        <option value="" disabled selected hidden>Escolha um aluno</option>
+                        {% for aluno in alunos %}
+                            {% if aluno.equipe == 'Nenhuma' %}
+                                <option value="{{aluno.ra}}">{{aluno.nome}} - {{aluno.ra}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+
+                    <label for="função">Função: </label>
+                    <select name="função" required>
+                        <option value="DevTeam">DevTeam</option>
+                        <option value="Scrum Master">Scrum Master</option>
+                        <option value="PO">Product Owner</option>
+                    </select><br>
+                    
+                    <input type="submit" value="Adicionar">
+
+                </form>
             </div>
-
-            <h2>Adicionar Membro: </h2>
-
-            <form action="scrum_master/adicionar_membro" method="POST" accept-charset="UTF-8">
-                <label for="nome-aluno">Membro: </label>
-                <select name="nome-aluno"   >
-                    <option value="" disabled selected hidden>Escolha um aluno</option>
-                    {% for aluno in alunos %}
-                        {% if aluno.equipe == 'Nenhuma' %}
-                            <option value="aluno-{{ loop.index }}">{{aluno.nome}} - {{aluno.ra}}</option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-
-                <label for="função">Função: </label>
-                <select name="função">
-                    <option value="devteam">DevTeam</option>
-                    <option value="scrum_master">Scrum Master</option>
-                    <option value="PO">Product Owner</option>
-
-                </select>
-
-
-            </form>
-
         </section>
 
 
