@@ -1,5 +1,5 @@
 from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app
-
+from utils.helpers import *
 
 professor = Blueprint('professor', __name__)
 

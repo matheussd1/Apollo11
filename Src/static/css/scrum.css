@@ -40,7 +40,10 @@ h1{
     color : #185c6e;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: 0.3s;
-    max-width: 30%;
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 85%;
+    max-height: 85%;
     font-family: Roboto Slab;
     font-size: large;
     font-weight: bold;
@@ -48,4 +51,8 @@ h1{
 
 .membro:hover {
     transform: scale(1.01);
+}
+
+.função{
+ margin-top: -5%;   
 }

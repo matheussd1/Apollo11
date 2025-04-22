@@ -5,7 +5,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
+        "equipe": "Jesus",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -20,8 +20,8 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
-        "função": "PO",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
             "Proatividade": [],
             "Autonomia": [],
@@ -80,7 +80,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -152,6 +152,36 @@
     {
         "nome": "Joaquim",
         "ra": "11111111",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "Isabela",
+        "ra": "666",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "Sávio",
+        "ra": "8080",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
