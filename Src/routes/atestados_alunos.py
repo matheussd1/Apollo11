@@ -9,7 +9,7 @@ atestados_alunos = Blueprint('atestados_alunos', __name__)
 
 @atestados_alunos.route('/atestados_alunos', methods=['POST','GET'])
 def index():
-    return render_template('atestados_alunos.html')
+    return render_template('atestados_alunos.html', atestados = usuario_atual()['atestados'], usuario = usuario_atual())
 
 @atestados_alunos.route('/enviar_atestados', methods =['POST', 'GET'])
 def enviar():
@@ -47,8 +47,21 @@ def enviar():
 # def download():
 #     return render_template('atestados_alunos.html')
 
-@atestados_alunos.route('/delet_atestados', methods =['POST', 'GET'])
-def delet():
+@atestados_alunos.route('/delete/<string:id>')
+def delete(id):
+    usuario = usuario_atual()
+
+    try:
+        os.remove(usuario[pegar_atestado(id)]['pdf'])
+    except:
+        pass
+
+    cadastros = carregar_alunos()
+    for cadastro in cadastros:
+        if cadastro['ra'] == usuario['ra']:
+              cadastro.pop(pegar_atestado(id))
+    salvar_aluno(cadastros)
+
     return render_template('atestados_alunos.html')
 
 # @atestados_alunos.route('/abrir_atestados', methods =['POST', 'GET'])

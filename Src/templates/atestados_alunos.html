@@ -22,16 +22,18 @@
                     <th>Status</th>
                 </tr>
                 
+                {% for atestado in atestados %}
                 <tr class="item">
-                    <td> 15/11/2006 </td>
-                    <td><a href="{{ url_for('atestados_alunos.index')}}" target="_blank">Abrir</a></td>
-                    <td><a href='{{ url_for("atestados_alunos.index") }}'>Apagar</a>
-                        <a href="{{ url_for('atestados_alunos.index') }}">Baixar</a>
+                    <td> {{ atestado.get('data_criado') }} </td>
+                    <td><a href="{{ url_for('atestados_alunos.abrir_pdf', pdf=atestado.pdf) }}" target="_blank">Abrir</a></td>
+                    <td><a href='/atestados_alunos/delete/{{atestado.id}}'>Apagar</a>
+                        <a href="/atestados_alunos/download/{{atestado.id}}">Baixar</a>
                     </th>
-                    <td>15/11/2006</td>
-                    <td>18/11/2006</td>
-                    <td>Não Verificado</td>
+                    <td>{{ atestado.c_afastamento }}</td>
+                    <td>{{ atestado.f_afastamento }}</td>
+                    <td>{{ atestado.status }}</td>
                 </tr>
+                {% endfor %}
             </table>
 
         </div>

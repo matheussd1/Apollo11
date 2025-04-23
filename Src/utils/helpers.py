@@ -5,6 +5,13 @@ USUARIOS_JSON = 'data/usuarios.json'
 EQUIPES_JSON = 'data/equipes.json'
 
 
+def pegar_atestado(id):
+    usuario = usuario_atual()
+    for atestado in usuario['atestados']:
+        if atestado['id'] == id:
+            return atestado
+
+
 def salvar_aluno(alunos):
     if not os.path.exists(USUARIOS_JSON):
         return []
@@ -74,3 +81,4 @@ def equipe_atual():
         if equipe == usuario_atual()['equipe']:
             return equipe
     return []
+
