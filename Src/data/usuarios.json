@@ -4,7 +4,16 @@
         "ra": "123",
         "senha": "123",
         "num_atestados": 0,
-        "atestados": {},
+        "atestados": {
+            "atestado_0": {
+                "pdf": "uploads/123/CamScanner 10-04-2025 15.56.pdf",
+                "id": "1e712324-5bc5-476e-8b60-4c7cf90881d4",
+                "data_criado": "2025-04-23",
+                "status": "Não Verificado",
+                "c_afastamento": "2025-04-23",
+                "f_afastamento": "2025-04-24"
+            }
+        },
         "equipe": "Jesus",
         "função": "DevTeam",
         "notas": {

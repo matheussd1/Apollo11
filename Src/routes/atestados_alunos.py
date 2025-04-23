@@ -1,5 +1,7 @@
 from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app, send_file
 from utils.helpers import *
+from uuid import uuid4
+from datetime import datetime, timezone
 
 
 atestados_alunos = Blueprint('atestados_alunos', __name__)
@@ -26,9 +28,19 @@ def enviar():
     caminho_pdf = os.path.join(pdf_path)
 
     pdf.save(caminho_pdf)
-    
-    
+    cadastros = carregar_alunos()
 
+    for i, cadastro in enumerate(cadastros):
+        if cadastro['ra'] == usuario['ra']: # ou current_app.config['RA_ATUAL']
+           
+            cadastros[i]['atestados'][f'atestado_{usuario['num_atestados']}'] = {'pdf': pdf_path,
+                                                                                'id': str(uuid4()),
+                                                                                'data_criado': str(datetime.now(timezone.utc)).split(' ')[0],
+                                                                                'status': 'Não Verificado',
+                                                                                'c_afastamento': c_afastamento,
+                                                                                'f_afastamento': f_afastamento}
+    
+    salvar_aluno(cadastros)
     return render_template('atestados_alunos.html')
 
 # @atestados_alunos.route('/download_atestados', methods =['POST', 'GET'])
