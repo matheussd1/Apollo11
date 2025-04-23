@@ -26,6 +26,7 @@ def usuario_atual():
         if aluno['ra'] == current_app.config['RA_ATUAL']:
             return aluno
 
+
 def mudar_valor(ra, valor, novo_valor):
     alunos = carregar_alunos()
 
