@@ -9,7 +9,12 @@ atestados_alunos = Blueprint('atestados_alunos', __name__)
 
 @atestados_alunos.route('/atestados_alunos', methods=['POST','GET'])
 def index():
-    return render_template('atestados_alunos.html', atestados = usuario_atual()['atestados'], usuario = usuario_atual())
+    atestados = []
+
+    for atestado in usuario_atual()['atestados']:
+        atestados.append(usuario_atual()['atestados'][atestado])
+
+    return render_template('atestados_alunos.html', atestados = atestados, usuario = usuario_atual())
 
 @atestados_alunos.route('/enviar_atestados', methods =['POST', 'GET'])
 def enviar():
@@ -30,9 +35,19 @@ def enviar():
     pdf.save(caminho_pdf)
     cadastros = carregar_alunos()
 
+    if 'num_arquivos' in usuario.keys():
+        usuario['num_atestados'] += 1
+    else:
+        usuario['num_atestados'] = 1
+
     for i, cadastro in enumerate(cadastros):
         if cadastro['ra'] == usuario['ra']: # ou current_app.config['RA_ATUAL']
            
+            if 'num_arquivos' in cadastros[i]:
+                cadastros[i]['num_atestados'] += 1
+            else:
+                cadastros[i]['num_atestados'] = 1
+
             cadastros[i]['atestados'][f'atestado_{usuario['num_atestados']}'] = {'pdf': pdf_path,
                                                                                 'id': str(uuid4()),
                                                                                 'data_criado': str(datetime.now(timezone.utc)).split(' ')[0],
@@ -41,7 +56,7 @@ def enviar():
                                                                                 'f_afastamento': f_afastamento}
     
     salvar_aluno(cadastros)
-    return render_template('atestados_alunos.html')
+    return redirect(url_for('atestados_alunos.index'))
 
 # @atestados_alunos.route('/download_atestados', methods =['POST', 'GET'])
 # def download():
@@ -52,18 +67,18 @@ def delete(id):
     usuario = usuario_atual()
 
     try:
-        os.remove(usuario[pegar_atestado(id)]['pdf'])
+        os.remove(usuario['atestados'][pegar_atestado(id)]['pdf'])
     except:
         pass
 
     cadastros = carregar_alunos()
     for cadastro in cadastros:
         if cadastro['ra'] == usuario['ra']:
-              cadastro.pop(pegar_atestado(id))
+              cadastro['atestados'].pop(pegar_atestado(id))
     salvar_aluno(cadastros)
 
-    return render_template('atestados_alunos.html')
+    return redirect(url_for('atestados_alunos.index'))
 
-# @atestados_alunos.route('/abrir_atestados', methods =['POST', 'GET'])
-# def abrir():
-#     return render_template('atestados_alunos.html')
+@atestados_alunos.route('/abrir_atestados/<string:pdf>', methods =['POST', 'GET'])
+def abrir(pdf):
+    return redirect(url_for('atestados_alunos.index'))

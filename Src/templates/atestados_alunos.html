@@ -23,16 +23,16 @@
                 </tr>
                 
                 {% for atestado in atestados %}
-                <tr class="item">
-                    <td> {{ atestado.get('data_criado') }} </td>
-                    <td><a href="{{ url_for('atestados_alunos.abrir_pdf', pdf=atestado.pdf) }}" target="_blank">Abrir</a></td>
-                    <td><a href='/atestados_alunos/delete/{{atestado.id}}'>Apagar</a>
-                        <a href="/atestados_alunos/download/{{atestado.id}}">Baixar</a>
-                    </th>
-                    <td>{{ atestado.c_afastamento }}</td>
-                    <td>{{ atestado.f_afastamento }}</td>
-                    <td>{{ atestado.status }}</td>
-                </tr>
+                    <tr class="item">
+                        <td> {{ atestado.get('data_criado') }} </td>
+                        <td><a href="{{ url_for('atestados_alunos.abrir', pdf=atestado.pdf) }}" target="_blank">Abrir</a></td>
+                        <td><a href='/atestados_alunos/delete/{{atestado.id}}'>Apagar</a>
+                            <a href="/atestados_alunos/download/{{atestado.id}}">Baixar</a>
+                        </th>
+                        <td>{{ atestado.c_afastamento }}</td>
+                        <td>{{ atestado.f_afastamento }}</td>
+                        <td>{{ atestado.status }}</td>
+                    </tr>
                 {% endfor %}
             </table>
 

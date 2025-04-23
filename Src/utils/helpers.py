@@ -8,7 +8,7 @@ EQUIPES_JSON = 'data/equipes.json'
 def pegar_atestado(id):
     usuario = usuario_atual()
     for atestado in usuario['atestados']:
-        if atestado['id'] == id:
+        if usuario['atestados'][atestado]['id'] == id:
             return atestado
 
 
