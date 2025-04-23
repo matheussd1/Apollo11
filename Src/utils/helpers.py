@@ -5,6 +5,13 @@ USUARIOS_JSON = 'data/usuarios.json'
 EQUIPES_JSON = 'data/equipes.json'
 
 
+def pegar_atestado(id):
+    usuario = usuario_atual()
+    for atestado in usuario['atestados']:
+        if atestado['id'] == id:
+            return atestado
+
+
 def salvar_aluno(alunos):
     if not os.path.exists(USUARIOS_JSON):
         return []
@@ -25,6 +32,7 @@ def usuario_atual():
     for aluno in alunos:
         if aluno['ra'] == current_app.config['RA_ATUAL']:
             return aluno
+
 
 def mudar_valor(ra, valor, novo_valor):
     alunos = carregar_alunos()
@@ -73,3 +81,4 @@ def equipe_atual():
         if equipe == usuario_atual()['equipe']:
             return equipe
     return []
+
