@@ -5,8 +5,8 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Jesus",
-        "função": "DevTeam",
+        "equipe": "Baltazar",
+        "função": "Scrum Master",
         "notas": {
             "Proatividade": [],
             "Autonomia": [],
@@ -80,7 +80,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Baltazar",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -125,7 +125,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Baltazar",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -155,7 +155,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Baltazar",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],

@@ -16,34 +16,29 @@
         </div>
     {% else %}
         <section class="container">
-            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s)</h1>   
-            
-                <article class="lista-de-membros">
-                    
-                    <div class="membro">
-                        <h2>{{dados_usuario.nome}} / {{dados_usuario.ra}}</h2>
-                        <h2 class="função">{{dados_usuario.função}}</h2>
-                        <div class="notas">
-                            {% for nota in dados_usuario.notas %}
-                                <h3>{{nota}}: 0</h3>
-                            {% endfor %}
-                        </div>
-                    </div>
 
+            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s)</h1>   
+            <article class="lista-de-membros">
                     {% for membro in equipe.membros %}
                         {% if membro != dados_usuario.ra %}
-                        <div class="membro">
-                            <h2>{{pegar_valor(membro, 'nome')}} / {{membro}}</h2> 
-                            <h2 class="função">{{pegar_valor(membro, 'função')}}</h2>
-                            <div class="notas">
-                                {% for nota in pegar_valor(membro, 'notas')%}
-                                    <h3>{{nota}}: 0</h3>
-                                {% endfor %}
+                           <div class="membro">
+                                <h2>{{pegar_valor(membro, 'nome')}} / {{membro}}</h2> 
+                                <h2 class="função">{{pegar_valor(membro, 'função')}}</h2>
+                                <div class="notas">
+                                    {% for nota in pegar_valor(membro, 'notas')%}
+                                        <h3>{{nota}}: 0</h3>
+                                  {% endfor %}
+                                </div>
                             </div>
-                        </div>
                         {% endif %}
-
                     {% endfor %}
                 </article>
+            
+            <!-- <article class="notas">
+                <h1>Suas Notas</h1>
+            </article> -->
+
+        </section>
+
     {% endif %}
 {% endblock %}
