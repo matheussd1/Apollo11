@@ -2,19 +2,86 @@
 
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum_master.css') }}">
 {% endblock %}
 
 
 {% block body %}
-    <div class="container">
 
-        <h1>Cadastro de Equipes Ágeis</h1>
-        
-        <h2>Você ainda não cadastrou sua equipe.</h2>
+    {% if not logado %}
+    <div class="login-container">
+        <h2>Login Scrum Master</h2>
 
-        <a href="{{ url_for('scrum_master.cadastro') }}">Cadastrar Agora</a>
+        <form action="/scrum_master/login" method="post" accept-charset="UTF-8">
+            
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
+
+            <input type="submit" name="logar" placeholder="Acessar">
+
+        </form>
 
     </div>
+    {% else %}
+
+        {% if dados_usuario.equipe == 'Nenhuma' %}
+
+        <div class="login-container">
+            <h2>Nome da sua equipe: </h2>
+            
+            <form action="/scrum_master/definir_nome" method='post' accept-charset="UTF-8">
+                <input type="text" name="nome-equipe">
+                <input type="submit" name="confirmar" placeholder="confirmar">
+            </form>
+
+        </div>
+        {% else %}
+
+        <section class="container">
+        <h1>Equipe <a href="{{url_for('scrum_master.definir_nome')}}">{{dados_usuario.equipe}}</a> - {{equipe.num_membros}} Integrante(s)</h1>   
+        
+            <article class="lista-de-membros">
+                {% for membro in equipe.membros %}
+
+                    <div class="membro">
+                        <h2>{{pegar_valor(membro, 'nome')}} - {{pegar_valor(membro, 'função')}}</h2>
+                        <h2>RA: {{pegar_valor(membro, 'ra')}}</h2>
+                    </div>
+
+                {% endfor %}
+
+            </article>
+
+            <div class="adicionar-membro">
+                <h2>Adicionar Membro: </h2>
+
+                <form action="/scrum_master/adicionar_membro" method="POST" accept-charset="UTF-8">
+                    <label for="ra-aluno">Membro: </label>
+                    <select name="ra-aluno" required>
+                        <option value="" disabled selected hidden>Escolha um aluno</option>
+                        {% for aluno in alunos %}
+                            {% if aluno.equipe == 'Nenhuma' %}
+                                <option value="{{aluno.ra}}">{{aluno.nome}} - {{aluno.ra}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+
+                    <label for="função">Função: </label>
+                    <select name="função" required>
+                        <option value="DevTeam">DevTeam</option>
+                        <option value="Scrum Master">Scrum Master</option>
+                        <option value="PO">Product Owner</option>
+                    </select><br>
+                    
+                    <input type="submit" value="Adicionar">
+
+                </form>
+            </div>
+        </section>
+
+
+
+        {% endif %}
+    {% endif %}
 
 {% endblock %}

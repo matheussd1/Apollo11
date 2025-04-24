@@ -4,6 +4,7 @@ from routes.atestados_alunos import atestados_alunos
 from routes.auth import auth
 from routes.scrum import scrum
 from routes.scrum_master import scrum_master
+import json, os
 
 
 app = Flask(__name__)
@@ -16,6 +17,10 @@ app.register_blueprint(scrum_master, url_prefix="/scrum_master")
 
 
 app.config['RA_ATUAL'] = '123'
+app.config['SENHA_PROF'] = '123'
+app.config['SENHA_SCRUM'] = '123'
+
+app.config['SCRUM_LOGADO'] = False
 
 
 if __name__ == "__main__":
