@@ -11,6 +11,10 @@
         <div class="atestados">
             <h1>Gerenciador de Atestados</h1>
 
+            {% if not atestados %}
+                <h2>Você ainda não enviou nenhum atestado.</h2>
+            {% else %}
+
             <table  border=1 frame=box rules=all style="width:70%">
             
                 <tr>
@@ -35,6 +39,7 @@
                     </tr>
                 {% endfor %}
             </table>
+            {% endif %}
 
         </div>
         <div class="form">
