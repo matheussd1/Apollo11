@@ -79,6 +79,7 @@ def salvar_equipe(equipe):
 def equipe_atual():
     for equipe in carregar_equipes():
         if equipe == usuario_atual()['equipe']:
+            print(equipe, flush=True)
             return equipe
     return []
 
