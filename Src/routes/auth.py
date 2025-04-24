@@ -4,8 +4,21 @@ from utils.helpers import salvar_aluno, carregar_alunos
 
 auth = Blueprint('auth', __name__)
 
-@auth.route('/login')
+#request.form[]
+
+@auth.route('/login', methods=['POST'])
 def login():
+    if request.method == 'POST':
+        ra = request.form['RA']
+        password = request.form['password']
+    
+        usuarios = carregar_alunos()
+
+        for usuario in usuarios:
+            if usuario['RA'] == ra and usuario['password'] == password:
+                current_app.config['RA_ATUAL'] = usuario['RA']
+                return redirect(url_for('atestados_aluno.index'))
+    
     return render_template('login_aluno.html')
 
 
