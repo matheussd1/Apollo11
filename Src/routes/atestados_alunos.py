@@ -1,6 +1,7 @@
 from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app, send_file
 from utils.helpers import *
 from uuid import uuid4
+from io import BytesIO
 from datetime import datetime, timezone
 
 
@@ -62,9 +63,19 @@ def enviar():
     salvar_aluno(cadastros)
     return redirect(url_for('atestados_alunos.index'))
 
-# @atestados_alunos.route('/download_atestados', methods =['POST', 'GET'])
-# def download():
-#     return render_template('atestados_alunos.html')
+@atestados_alunos.route('/download_atestados/<string:id>', methods =['POST', 'GET'])
+def download(id):
+    usuario = usuario_atual()
+    atestado = pegar_atestado(id=id)
+
+    nome_arquivo = f'Atestado {usuario['atestados'][atestado]['data_criado']} {usuario['nome']}.pdf'
+    caminho = usuario['atestados'][atestado]['pdf']
+    with open(caminho, "rb") as file:
+        pdf_bytes = BytesIO(file.read())
+    return send_file(pdf_bytes,
+                     mimetype= 'application/pdf',
+                     as_attachment=True,
+                     download_name=nome_arquivo)
 
 @atestados_alunos.route('/delete/<string:id>')
 def delete(id):
@@ -83,6 +94,6 @@ def delete(id):
 
     return redirect(url_for('atestados_alunos.index'))
 
-@atestados_alunos.route('/abrir_atestados/<string:pdf>', methods =['POST', 'GET'])
-def abrir(pdf):
-    return redirect(url_for('atestados_alunos.index'))
+@atestados_alunos.route('/abrir_atestados/<path:pdf>')
+def abrir_atestados(pdf):
+    return send_file(pdf, mimetype='application/pdf', as_attachment=False)

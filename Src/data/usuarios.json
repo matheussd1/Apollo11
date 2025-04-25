@@ -5,8 +5,8 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
-        "função": "PO",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
             "Proatividade": [],
             "Autonomia": [],
@@ -18,10 +18,19 @@
         "nome": "Caio César dos Santos",
         "ra": "123",
         "senha": "123",
-        "num_atestados": 0,
-        "atestados": {},
-        "equipe": "Baltazar",
-        "função": "Scrum Master",
+        "num_atestados": 1,
+        "atestados": {
+            "atestado_1": {
+                "pdf": "uploads/123/Serviços — MEC-SP.pdf",
+                "id": "8a086f2f-986d-4e9e-a595-3889cb77a450",
+                "data_criado": "2025-04-25",
+                "status": "Não Verificado",
+                "c_afastamento": "",
+                "f_afastamento": ""
+            }
+        },
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
             "Proatividade": [],
             "Autonomia": [],
@@ -35,7 +44,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -50,7 +59,22 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Baltazar",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": []
+        }
+    },
+    {
+        "nome": "aaa",
+        "ra": "122",
+        "senha": "122",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
