@@ -36,7 +36,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
 <br>
 
 ## 🏆**MVP**
-![imgage alt](https://github.com/matheussd1/Apollo11/blob/main/Documents/img/MVP_1.jpg?raw=true)
+![imgage alt](https://github.com/matheussd1/Apollo11/blob/main/Documents/img/MVP_2.jpg?raw=true)
 1. Wireframe: [Protótipo navegável](https://www.figma.com/design/snwp3uCdIYLKA9mw0Ymj7B/login?node-id=0-1&t=PVu3Mg1vIH0n0J8Y-1)
 2. Web Site: [Versão atual](Documents/video)
 
