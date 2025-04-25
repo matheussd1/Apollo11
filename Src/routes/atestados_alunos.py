@@ -40,7 +40,7 @@ def enviar():
     pdf.save(caminho_pdf)
     cadastros = carregar_alunos()
 
-    if 'num_arquivos' in usuario.keys():
+    if 'num_atestados' in usuario.keys():
         usuario['num_atestados'] += 1
     else:
         usuario['num_atestados'] = 1
@@ -48,7 +48,7 @@ def enviar():
     for i, cadastro in enumerate(cadastros):
         if cadastro['ra'] == usuario['ra']: # ou current_app.config['RA_ATUAL']
            
-            if 'num_arquivos' in cadastros[i]:
+            if 'num_atestados' in cadastros[i]:
                 cadastros[i]['num_atestados'] += 1
             else:
                 cadastros[i]['num_atestados'] = 1

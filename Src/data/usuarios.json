@@ -18,17 +18,8 @@
         "nome": "Caio César dos Santos",
         "ra": "123",
         "senha": "123",
-        "num_atestados": 1,
-        "atestados": {
-            "atestado_1": {
-                "pdf": "uploads/123/Serviços — MEC-SP.pdf",
-                "id": "8a086f2f-986d-4e9e-a595-3889cb77a450",
-                "data_criado": "2025-04-25",
-                "status": "Não Verificado",
-                "c_afastamento": "",
-                "f_afastamento": ""
-            }
-        },
+        "num_atestados": 2,
+        "atestados": {},
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
