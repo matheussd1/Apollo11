@@ -80,37 +80,37 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
         <td> Média </td>
         <td> Como aluno, eu quero poder verificar o status do meu atestado (Pendente, Enviado, Recebido… etc), para saber se foi aceito ou deferido </td>
         <td> 2 </td>
-        <td> 🕓 </td>
+        <td> ✅ </td>
         <td>  </td>
     </tr>
     </tr>
         <td> 5 </td>
         <td> Alta </td>
-        <td> Como professor, quero ter uma área para acessar os atestados enviados por alunos </td>
+        <td> Como aluno e integrante de uma equipe ágil, quero ter uma área/seção de avaliação do time ágil e seus membros </td>
         <td> 2 </td>
-        <td> 🕓 </td>
+        <td> ✅ </td>
         <td>  </td>
     </tr>
     </tr>
         <td> 6 </td>
         <td> Média </td>
-        <td> Como professor quero selecionar um botão para validar atestados de alunos </td>
+        <td> Como aluno e integrante de uma equipe, gostaria de poder cadastrar o time ágil e seus os respectivos membros </td>
         <td> 2 </td>
-        <td> 🕓 </td>
+        <td> ✅ </td>
         <td>  </td>
     </tr>
     </tr>
         <td> 7 </td>
         <td> Alta </td>
-        <td> Como professor, eu gostaria de ter uma área para buscar alunos por nome completo ou RA </td>
-        <td> 2 </td>
+        <td> Como professor, quero ter uma área para acessar os atestados enviados por alunos </td>
+        <td> 3 </td>
         <td> 🕓 </td>
         <td>  </td>
     </tr>
     </tr>
         <td> 8 </td>
         <td> Alta </td>
-        <td> Como aluno e integrante de uma equipe ágil, quero ter uma área/seção de avaliação do time ágil e seus membros </td>
+        <td> Como professor quero selecionar um botão para validar atestados de alunos </td>
         <td> 3 </td>
         <td> 🕓 </td>
         <td>  </td>
@@ -118,7 +118,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
     </tr>
         <td> 9 </td>
         <td> Alta </td>
-        <td> Como aluno e integrante de uma equipe, gostaria de poder cadastrar o time ágil e seus os respectivos membros </td>
+        <td> Como professor, eu gostaria de ter uma área para buscar alunos por nome completo ou RA </td>
         <td> 3 </td>
         <td> 🕓 </td>
         <td>  </td>
@@ -133,4 +133,17 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
     </tr>
         
 </table>
+
+## 👨‍💻**Autores** 
+
+|      Nome      |    Função       |                            Github                             |           
+| :--------------: | :-----------: | :----------------------------------------------------------: | 
+|  Jessica Katayama     | Scrum Master  | <a href="https://github.com/JessicaKatayama"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Matheus Dias     | Product Owner  | <a href="https://github.com/matheussd1"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Bruna Correa     | Desenvolvedora  | <a href="https://github.com/brunacorrea-s"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Caio dos Santos     | Desenvolvedor  | <a href="https://github.com/JkDeltaz"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Flávio Araújo     | Desenvolvedor  | <a href="https://github.com/hmlflavio"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Isabela Freitas     | Desenvolvedora  | <a href="https://github.com/IsabelaFreitasDev"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  João Schimidt Silva     | Desenvolvedor  | <a href="https://github.com/Joao-GS-Silva"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
+|  Savio de Morais     | Desenvolvedor  | <a href="https://github.com/aasavio"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |
 
