@@ -40,7 +40,7 @@ input {
     border-radius: 5px;
 }
 
-button {
+input[type='submit'], button {
     background-color: #185c6e;
     color: white;
     border: none;
@@ -55,7 +55,7 @@ button {
     margin-bottom: 3%;
 }
 
-button:hover{
+input[type='submit']:hover, button:hover{
     background-color: #f5f5ee;
     color: #185c6e;
     padding: 12px 32px;

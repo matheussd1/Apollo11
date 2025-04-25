@@ -19,6 +19,10 @@ def render_with_info():
 
 @scrum_master.route('/scrum_master', methods=['GET', 'POST'])
 def index():
+
+    if not current_app.config['RA_ATUAL']:
+        return redirect(url_for('auth.login'))
+
     return render_with_info()
 
 @scrum_master.route('/login', methods=['GET', 'POST'])

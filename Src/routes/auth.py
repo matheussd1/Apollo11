@@ -4,22 +4,25 @@ from utils.helpers import salvar_aluno, carregar_alunos
 
 auth = Blueprint('auth', __name__)
 
-#request.form[]
 
-@auth.route('/login', methods=['POST'])
+@auth.route('/login', methods=['POST', 'GET'])
 def login():
+
+    if current_app.config['RA_ATUAL'] != '':
+        return redirect(url_for('atestados_alunos.index'))
+
     if request.method == 'POST':
         ra = request.form['RA']
         password = request.form['password']
-    
+
         usuarios = carregar_alunos()
 
         for usuario in usuarios:
-            if usuario['RA'] == ra and usuario['password'] == password:
-                current_app.config['RA_ATUAL'] = usuario['RA']
-                return redirect(url_for('atestados_aluno.index'))
+            if usuario['ra'] == ra and usuario['senha'] == password:
+                current_app.config['RA_ATUAL'] = usuario['ra']
+                return redirect(url_for('atestados_alunos.index'))
     
-    return render_template('login_aluno.html')
+    return render_template("login_aluno.html")
 
 
 @auth.route('/login_professor')
@@ -50,4 +53,12 @@ def cadastro_aluno():
         alunos.append(dados)
         salvar_aluno(alunos)
 
+        return redirect(url_for("auth.login"))
+
     return render_template('cadastro_aluno.html')
+
+@auth.route('/sair')
+def sair():
+    current_app.config['RA_ATUAL'] = ''
+    current_app.config['SCRUM_LOGADO'] = False
+    return redirect(url_for('auth.login'))

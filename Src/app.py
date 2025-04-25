@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, redirect
 from routes.atestados_professor import professor
 from routes.atestados_alunos import atestados_alunos
 from routes.auth import auth
@@ -16,7 +16,7 @@ app.register_blueprint(scrum, url_prefix="/scrum")
 app.register_blueprint(scrum_master, url_prefix="/scrum_master")
 
 
-app.config['RA_ATUAL'] = '123'
+app.config['RA_ATUAL'] = ''
 app.config['SENHA_PROF'] = '123'
 app.config['SENHA_SCRUM'] = '123'
 
@@ -28,4 +28,4 @@ if __name__ == "__main__":
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return redirect(url_for('auth.login'))

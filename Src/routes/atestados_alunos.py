@@ -9,6 +9,10 @@ atestados_alunos = Blueprint('atestados_alunos', __name__)
 
 @atestados_alunos.route('/atestados_alunos', methods=['POST','GET'])
 def index():
+
+    if not current_app.config['RA_ATUAL']:
+        return redirect(url_for('auth.login'))
+
     atestados = []
 
     for atestado in usuario_atual()['atestados']:

@@ -17,4 +17,7 @@ def render_with_info():
 
 @scrum.route('/scrum')
 def index():
+    if not current_app.config['RA_ATUAL']:
+        return redirect(url_for('auth.login'))
+
     return render_with_info()

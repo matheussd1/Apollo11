@@ -9,17 +9,19 @@
     <div class="login-container">
         <h2>Login Aluno</h2>
 
-        <label class="la_logina">RA</label>
-        <input class="input_logina" type="text">
-        
-        <label class="la_logina">Senha</label>
-        <input class="input_logina" type="password">
-        
-        <a class="a_login" href="{{ url_for('atestados_alunos.index') }}"><button>Acessar</button></a>
+        <form action="/auth/login" method="POST" accept-charset="UTF-8">
+            <label class="la_logina">RA</label>
+            <input class="input_logina" type="text" name="RA">
+            
+            <label class="la_logina">Senha</label>
+            <input class="input_logina" type="password" name="password">
+            
+            <input type="submit" value="Login">
 
-        <p>
-        Ainda não possui uma conta?
-        <a class="a_login" href="{{ url_for('auth.cadastro_aluno') }}">Cadastre-se!</a>
-        </p>
+            <p>
+            Ainda não possui uma conta?
+            <a class="a_login" href="{{ url_for('auth.cadastro_aluno') }}">Cadastre-se!</a>
+            </p>
+        </form>
     </div>
 {% endblock %}
