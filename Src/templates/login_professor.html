@@ -9,10 +9,11 @@
     <div class="login-container">
         <h2>Login professor</h2>
 
-        <label for="senha">Senha</label>
-        <input id="input_loginpro" type="password">
-        <a href="{{ url_for('professor.index') }}">
-        <button id="but_loginpro">Acessar</button>
-        </a>
+        <form action="{{ url_for('auth.login_professor') }}" method="POST">
+            <label for="senha">Senha</label>
+            <input name="senha" id="input_loginpro" type="password" required>
+            <button type="submit" id="but_loginpro">Acessar</button>
+        </form>
+
     </div>
 {% endblock %}
