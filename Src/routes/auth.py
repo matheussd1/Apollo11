@@ -25,8 +25,14 @@ def login():
     return render_template("login_aluno.html")
 
 
-@auth.route('/login_professor')
+@auth.route('/login_professor', methods=['GET', 'POST'])
 def login_professor():
+    if request.method == 'POST':
+        senha = request.form.get('senha')
+
+        if senha == current_app.config['SENHA_PROF']:
+            return redirect(url_for('professor.index'))
+        
     return render_template('login_professor.html')
 
 
