@@ -81,7 +81,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
         <td> Como aluno, eu quero poder verificar o status do meu atestado (Pendente, Enviado, Recebido… etc), para saber se foi aceito ou deferido </td>
         <td> 2 </td>
         <td> ✅ </td>
-        <td>  </td>
+        <td> 25/04 </td>
     </tr>
     </tr>
         <td> 5 </td>
@@ -89,7 +89,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
         <td> Como aluno e integrante de uma equipe ágil, quero ter uma área/seção de avaliação do time ágil e seus membros </td>
         <td> 2 </td>
         <td> ✅ </td>
-        <td>  </td>
+        <td> 25/04 </td>
     </tr>
     </tr>
         <td> 6 </td>
@@ -97,7 +97,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
         <td> Como aluno e integrante de uma equipe, gostaria de poder cadastrar o time ágil e seus os respectivos membros </td>
         <td> 2 </td>
         <td> ✅ </td>
-        <td>  </td>
+        <td> 25/04 </td>
     </tr>
     </tr>
         <td> 7 </td>
