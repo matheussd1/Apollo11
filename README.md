@@ -38,7 +38,8 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
 ## 🏆**MVP**
 ![imgage alt](https://github.com/matheussd1/Apollo11/blob/main/Documents/img/MVP_2.jpg?raw=true)
 1. Wireframe: [Protótipo navegável](https://www.figma.com/design/snwp3uCdIYLKA9mw0Ymj7B/login?node-id=0-1&t=PVu3Mg1vIH0n0J8Y-1)
-2. Web Site: [Versão atual](Documents/video)
+2. Web Site Sprint 01: [Versão atual](Documents/video)
+3. Web Site Sprint 02: https://youtu.be/gwc2gSKfA3g 
 
 <br>
 
