@@ -53,7 +53,7 @@ def definir_nome():
 
         mudar_valor(current_app.config['RA_ATUAL'], 'equipe', nome_equipe)
 
-        equipes[nome_equipe] = {'num_membros': 1, "votação": False, 'membros': [usuario_atual()['ra']]}
+        equipes[nome_equipe] = {'num_membros': 1, "avaliação": False, 'membros': [usuario_atual()['ra']]}
         salvar_equipe(equipes)
 
     return redirect(url_for('scrum_master.index'))
@@ -72,6 +72,21 @@ def adicionar_membro():
         salvar_equipe(equipes)
 
         return redirect(url_for('scrum_master.index'))
+
+
+@scrum_master.route('/abrir_avaliação')
+def abrir_avaliação():
+    
+    equipe_usuario = equipe_atual()
+    equipes = carregar_equipes()
+
+    for equipe in equipes:
+        if equipe_usuario == equipe:
+            equipes[equipe]['avaliação'] = True
+    
+    salvar_equipe(equipes)
+
+    return redirect(url_for('scrum_master.index'))
 
 
 

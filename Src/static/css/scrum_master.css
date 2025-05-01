@@ -163,3 +163,9 @@ option{
 a{
     color: #f5f5ee;
 } 
+
+.avaliação{
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+}

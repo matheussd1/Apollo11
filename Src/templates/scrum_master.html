@@ -79,7 +79,16 @@
             </div>
         </section>
 
+        <div class="avaliação">
+            
+            {% if equipe.avaliação == False %}
+                <h1><a href="{{url_for('scrum_master.abrir_avaliação')}}">Abrir período de Avaliações.</a></h1>
+            {% else %}
+                <h1>Fechar Avaliações</h1>
+            {% endif %}
 
+
+        </div>
 
         {% endif %}
     {% endif %}

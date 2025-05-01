@@ -69,17 +69,16 @@ def adicionar_membro(nome_equipe, membro, função):
         if equipe == nome_equipe:
             equipes[equipe]['membros'][membro] = {}
 
-def salvar_equipe(equipe):
+def salvar_equipe(equipes):
     if not os.path.exists(EQUIPES_JSON):
         return []
 
     with open(EQUIPES_JSON, 'w', encoding='utf-8') as file:
-        json.dump(equipe, file, indent=4, ensure_ascii=False)
+        json.dump(equipes, file, indent=4, ensure_ascii=False)
 
 def equipe_atual():
     for equipe in carregar_equipes():
         if equipe == usuario_atual()['equipe']:
-            print(equipe, flush=True)
             return equipe
     return []
 

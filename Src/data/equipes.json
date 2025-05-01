@@ -1,1 +1,10 @@
-{}
+{
+    "Cor Leonis": {
+        "num_membros": 2,
+        "avaliação": true,
+        "membros": [
+            "123",
+            "999"
+        ]
+    }
+}
