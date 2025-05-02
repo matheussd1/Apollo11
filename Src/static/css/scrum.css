@@ -64,8 +64,16 @@ h1{
     transform: scale(1.01);
 }
 
+.membro a{
+    color:#185c6e;
+}
+
 .container a{
     color: #f5f5ee;
+}
+
+.membro a{
+    color:#185c6e;
 }
 
 .função{

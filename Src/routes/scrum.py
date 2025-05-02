@@ -21,3 +21,8 @@ def index():
         return redirect(url_for('auth.login'))
 
     return render_with_info()
+
+
+@scrum.route('/avaliar_membro/<string:ra>')
+def avaliar_membro(ra):
+    return render_template('avaliação.html')

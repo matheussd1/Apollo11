@@ -28,6 +28,10 @@
                                     {% for nota in pegar_valor(membro, 'notas')%}
                                         <h3>{{nota}}: 0</h3>
                                   {% endfor %}
+                                    
+                                {% if equipe.avaliação %}
+                                    <h2><a href="/scrum/avaliar_membro/{{membro}}">Avaliar Membro</a></h2>
+                                {% endif %}
                                 </div>
                             </div>
                         {% endif %}
