@@ -2,5 +2,23 @@ body, html {
     margin: 0;
     font-family: Roboto Slab;
     background-color: #185c6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #f5f5ee;
+}
+
+
+.container{
+    border-radius: 20px;
+    background-color: #f4f3f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #185c6e;
+    width: 90vw;
+    height: 80vh;
 }

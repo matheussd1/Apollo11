@@ -25,4 +25,4 @@ def index():
 
 @scrum.route('/avaliar_membro/<string:ra>')
 def avaliar_membro(ra):
-    return render_template('avaliação.html')
+    return render_template('avaliação.html', membro=pegar_membro(ra))

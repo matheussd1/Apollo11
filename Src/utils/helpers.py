@@ -82,3 +82,8 @@ def equipe_atual():
             return equipe
     return []
 
+def pegar_membro(ra):
+    for aluno in carregar_alunos():
+        if aluno['ra'] == ra:
+            return aluno
+    return []
