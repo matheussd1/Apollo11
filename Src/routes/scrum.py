@@ -28,7 +28,7 @@ def avaliar_membro(ra):
     return render_template('avaliação.html', membro=pegar_membro(ra))
 
 
-@scrum.route('/finalizar', methods=['GET', 'POST'])
-def finalizar():
+@scrum.route('/finalizar/<string:ra>', methods=['GET', 'POST'])
+def finalizar(ra):
     dados = request.form.to_dict()
-    return f'Dados recebidos: {dados}'
+    return f'Dados recebidos: {dados}, {ra}'

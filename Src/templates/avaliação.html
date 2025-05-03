@@ -12,10 +12,10 @@
     <section class="container">
         <article class="input-container">
 
-            <form action="/scrum/finalizar" method="post" id="scrum-form">
+            <form action="/scrum/finalizar/{{membro.ra}}" method="post" id="scrum-form">
                 <div class="critério">
                     <h2>O quanto {{membro.nome}} foi proativo(a)?</h2>
-                    <input type="radio" id="0" value="0" name="proatividade">
+                    <input type="radio" id="0" value="0" name="proatividade" required>
                     <label for="0">0</label>
                     <input type="radio" id="1" value="1" name="proatividade">
                     <label for="1">1</label>
@@ -27,7 +27,7 @@
 
                 <div class="critério">
                     <h2>O quanto {{membro.nome}} foi autonomo(a)?</h2>
-                    <input type="radio" id="0" value="0" name="autonomia">
+                    <input type="radio" id="0" value="0" name="autonomia" required>
                     <label for="0">0</label>
                     <input type="radio" id="1" value="1" name="autonomia">
                     <label for="1">1</label>
@@ -39,7 +39,7 @@
 
                 <div class="critério">
                     <h2>O quanto {{membro.nome}} foi colaborativo(a)?</h2>
-                    <input type="radio" id="0" value="0" name="colaboração">
+                    <input type="radio" id="0" value="0" name="colaboração" required>
                     <label for="0">0</label>
                     <input type="radio" id="1" value="1" name="colaboração">
                     <label for="1">1</label>
@@ -51,7 +51,7 @@
 
                 <div class="critério">
                     <h2>Como foi a entrega de resultados de {{membro.nome}}?</h2>
-                    <input type="radio" id="0" value="0" name="resultados">
+                    <input type="radio" id="0" value="0" name="resultados" required>
                     <label for="0">0</label>
                     <input type="radio" id="1" value="1" name="resultados">
                     <label for="1">1</label>
@@ -67,7 +67,7 @@
         </article>
 
         <article class="comentários-submit">
-            <textarea name="comentário" placeholder="Caso queira, deixe um comentário anônimo sobre {{membro.nome}}"></textarea>
+            <textarea name="comentário" placeholder="Caso queira, deixe um comentário anônimo sobre {{membro.nome}}" form="scrum-form"></textarea>
 
             
             <input type="submit" value="Finalizar Avaliação" form="scrum-form">
