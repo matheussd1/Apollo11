@@ -6,13 +6,13 @@ body, html {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    color: #f5f5ee;
+    color: #f4f3f6;
 }
 
 .login-container{
     text-align: left;
     border-radius: 20px;
-    background-color: #f5f5ee;
+    background-color: #f4f3f6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #185c6e;
     margin: 5% 0;
@@ -42,7 +42,7 @@ input {
 
 input[type='submit'], button {
     background-color: #185c6e;
-    color: white;
+    color: #f4f3f6;
     border: none;
     padding: 10px 30px;
     border-radius: 100px;
@@ -56,7 +56,7 @@ input[type='submit'], button {
 }
 
 input[type='submit']:hover, button:hover{
-    background-color: #f5f5ee;
+    background-color: #f4f3f6;
     color: #185c6e;
     padding: 12px 32px;
 }

@@ -6,13 +6,13 @@ body, html {
     flex-direction: column;
     justify-content: center;   
     align-items: center;
-    color: #f5f5ee;
+    color: #f4f3f6;
 }
 
 
 .cadastro{
     border-radius: 2%;
-    background-color: #f5f5ee;
+    background-color: #f4f3f6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 3%;
     display: flex;
@@ -43,7 +43,7 @@ body, html {
     border-radius: 20px;
     border: 2px solid #185c6e;
     background-color:  #185c6e;
-    color: #f5f5ee;
+    color: #f4f3f6;
     padding: 12px 10px 12px 10px;
     margin: 10px 0 25px 0px;
     text-align: center;
@@ -54,7 +54,7 @@ body, html {
 }
 
 .cadastro form input[type=submit]:hover{
-    background-color: #f5f5ee;
+    background-color: #f4f3f6;
     color: #185c6e;
     padding: 14px 12px;
 }
