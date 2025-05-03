@@ -47,7 +47,7 @@ def cadastro_aluno():
                  'atestados': {},
                  'equipe': 'Nenhuma',
                  'função': 'DevTeam',
-                 "notas": {"Proatividade": [], "Autonomia": [], "Colaboração": [], "Entrega de Resultados": []}}
+                 "notas": {"Proatividade": [], "Autonomia": [], "Colaboração": [], "Entrega de Resultados": [], "Comentários": []}}
 
 
         alunos = carregar_alunos()
