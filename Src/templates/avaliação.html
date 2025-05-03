@@ -5,5 +5,72 @@
 {% endblock %}  
 
 {% block body %}
-    <h1>Avaliação de {{membro.nome}}</h1>
+    <header>
+        <h1>Avaliação de {{membro.nome}}</h1>
+    </header>
+    
+    <section class="container">
+        <article class="input-container">
+
+            <form action="/scrum/finalizar" method="post" id="scrum-form">
+                <div class="critério">
+                    <h2>O quanto {{membro.nome}} foi proativo(a)?</h2>
+                    <input type="radio" id="0" value="0" name="proatividade">
+                    <label for="0">0</label>
+                    <input type="radio" id="1" value="1" name="proatividade">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" value="2" name="proatividade">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" value="3" name="proatividade">
+                    <label for="3">3</label>
+                </div>
+
+                <div class="critério">
+                    <h2>O quanto {{membro.nome}} foi autonomo(a)?</h2>
+                    <input type="radio" id="0" value="0" name="autonomia">
+                    <label for="0">0</label>
+                    <input type="radio" id="1" value="1" name="autonomia">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" value="2" name="autonomia">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" value="3" name="autonomia">
+                    <label for="3">3</label>
+                </div>
+
+                <div class="critério">
+                    <h2>O quanto {{membro.nome}} foi colaborativo(a)?</h2>
+                    <input type="radio" id="0" value="0" name="colaboração">
+                    <label for="0">0</label>
+                    <input type="radio" id="1" value="1" name="colaboração">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" value="2" name="colaboração">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" value="3" name="colaboração">
+                    <label for="3">3</label>
+                </div>
+
+                <div class="critério">
+                    <h2>Como foi a entrega de resultados de {{membro.nome}}?</h2>
+                    <input type="radio" id="0" value="0" name="resultados">
+                    <label for="0">0</label>
+                    <input type="radio" id="1" value="1" name="resultados">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" value="2" name="resultados">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" value="3" name="resultados">
+                    <label for="3">3</label>
+                </div>
+            
+
+            </form>
+
+        </article>
+
+        <article class="comentários-submit">
+            <textarea name="comentário" placeholder="Caso queira, deixe um comentário anônimo sobre {{membro.nome}}"></textarea>
+
+            
+            <input type="submit" value="Finalizar Avaliação" form="scrum-form">
+        </article>
+    </section>
 {% endblock %}
