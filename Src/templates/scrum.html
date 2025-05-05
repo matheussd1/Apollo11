@@ -27,9 +27,15 @@
                                 <div class="notas">
                                     {% for nota in pegar_valor(membro, 'notas')%}
                                         <h3>{{nota}}: 0</h3>
-                                  {% endfor %}
-                                    
-                                {% if equipe.avaliação %}
+                                    {% endfor %}
+                                
+                                {% set notas = [] %}
+                                {% for tipo_nota in pegar_notas(membro).values() %}
+                                        {% for valor in tipo_nota %}
+                                            {% set notas = notas.append(valor[0]) %}
+                                        {% endfor %}
+                                {% endfor %}
+                                {% if equipe.avaliação and not dados_usuario.ra in notas%}
                                     <h3><a href="/scrum/avaliar_membro/{{membro}}" id="avaliar">Avaliar Membro</a></h3>
                                 {% endif %}
                                 </div>

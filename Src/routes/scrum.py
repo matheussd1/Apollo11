@@ -13,7 +13,8 @@ def render_with_info():
                         dados_usuario = usuario_atual(),
                         alunos = carregar_alunos(),
                         equipe = equipe,
-                        pegar_valor = pegar_valor)
+                        pegar_valor = pegar_valor,
+                        pegar_notas = pegar_notas)
 
 @scrum.route('/scrum')
 def index():
@@ -30,5 +31,19 @@ def avaliar_membro(ra):
 
 @scrum.route('/finalizar/<string:ra>', methods=['GET', 'POST'])
 def finalizar(ra):
-    dados = request.form.to_dict()
-    return f'Dados recebidos: {dados}, {ra}'
+    if request.method == 'POST':
+        dados = request.form.to_dict()
+        
+        membros = carregar_alunos()
+        avaliado = pegar_membro(ra)
+
+        for nota in avaliado.get('notas'):
+            for nota_avaliador in dados:
+                if nota.lower() == nota_avaliador:
+                    for i, membro in enumerate(membros):
+                        if membro.get('ra') == ra:
+                            membros[i]['notas'][nota].append([current_app.config['RA_ATUAL'], dados.get(nota_avaliador)])
+                            break
+        salvar_aluno(membros)
+
+    return redirect(url_for('scrum.index'))

@@ -87,3 +87,7 @@ def pegar_membro(ra):
         if aluno['ra'] == ra:
             return aluno
     return []
+
+def pegar_notas(ra):
+    membro = pegar_membro(ra)
+    return membro.get('notas')
