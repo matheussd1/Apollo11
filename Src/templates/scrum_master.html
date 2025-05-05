@@ -81,10 +81,32 @@
 
         <div class="avaliação">
             
+            <script>
+
+                function alerta_abrir() {
+                  let confirmation = confirm("Abrir o período de avaliação apagará todas as notas\n" +
+                    "anteriores. Tem certeza de que deseja abrir as avaliações?")
+                  if (confirmation) {
+                    window.location.href = '{{url_for("scrum_master.abrir_avaliação")}}'
+                  } 
+                }
+
+                function alerta_fechar() {
+                  let confirmation = confirm("Alguns membros provavelmente ainda não terminaram\n" +
+                    "de avaliar. Tem certeza de que deseja fechar as avaliações?")
+                  if (confirmation) {
+                    window.location.href = '{{url_for("scrum_master.fechar_avaliação")}}'
+                  } 
+                }
+
+
+
+            </script>
+    
             {% if equipe.avaliação == False %}
-                <h1><a href="{{url_for('scrum_master.abrir_avaliação')}}">Abrir período de Avaliações.</a></h1>
+                <h1><a onclick="alerta_abrir()" id="abrir-avaliação">Abrir período de Avaliações.</a></h1>
             {% else %}
-                <h1>Fechar Avaliações</h1>
+                <h1><a onclick="alerta_fechar()" id="fechar-avaliação">Fechar Avaliações</a></h1>
             {% endif %}
 
 

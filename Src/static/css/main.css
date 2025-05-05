@@ -7,6 +7,15 @@
     display: flex;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .topnav a {
     background-color: transparent;
     border: 0px;

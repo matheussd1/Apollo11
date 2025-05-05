@@ -26,7 +26,9 @@
                                 <h2 class="função">{{pegar_valor(membro, 'função')}}</h2>
                                 <div class="notas">
                                     {% for nota in pegar_valor(membro, 'notas')%}
-                                        <h3>{{nota}}: 0</h3>
+                                        {% if nota != 'Comentários' %}
+                                            <h3>{{nota}}: 0</h3>
+                                        {% endif %}
                                     {% endfor %}
                                 
                                 {% set notas = [] %}

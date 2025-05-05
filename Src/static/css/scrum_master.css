@@ -164,8 +164,16 @@ a{
     color: #f4f3f6;
 } 
 
-.avaliação{
+.avaliação {
     position: absolute;
     bottom: 20%;
-    right: 5%;
+    left: 32%;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.avaliação h1{
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
 }

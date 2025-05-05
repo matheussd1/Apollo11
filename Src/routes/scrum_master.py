@@ -88,6 +88,18 @@ def abrir_avaliação():
 
     return redirect(url_for('scrum_master.index'))
 
+@scrum_master.route('/fechar_avaliação')
+def fechar_avaliação():
+    equipe_usuario = equipe_atual()
+    equipes = carregar_equipes()
+
+    for equipe in equipes:
+        if equipe_usuario == equipe:
+            equipes[equipe]['avaliação'] = False
+    
+    salvar_equipe(equipes)
+
+    return redirect(url_for('scrum_master.index'))
 
 
 # DEBUG

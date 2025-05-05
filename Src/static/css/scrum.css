@@ -7,15 +7,6 @@ body, html {
     align-items: center;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
-
-html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
 h1 {
     font-size: 2.2em;
     text-align: center;
