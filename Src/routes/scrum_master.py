@@ -86,6 +86,15 @@ def abrir_avaliação():
     
     salvar_equipe(equipes)
 
+    alunos = carregar_alunos()
+
+    for ra in equipes[equipe_usuario].get('membros'):
+        for i, aluno in enumerate(alunos):
+            if aluno.get('ra') == ra:
+                for nota in aluno.get('notas'):
+                    alunos[i]['notas'][nota] = []
+    salvar_aluno(alunos)
+
     return redirect(url_for('scrum_master.index'))
 
 @scrum_master.route('/fechar_avaliação')
@@ -99,8 +108,20 @@ def fechar_avaliação():
     
     salvar_equipe(equipes)
 
-    return redirect(url_for('scrum_master.index'))
+    alunos = carregar_alunos()
 
+    for ra in equipes[equipe_usuario].get('membros'):
+        for i, aluno in enumerate(alunos):
+            if aluno.get('ra') == ra:
+                for nota in aluno.get('notas'):
+
+                    div = len(aluno['notas'][nota]) if aluno['notas'][nota] else 1
+
+                    alunos[i]['notas'][nota] = abs(sum([int(x[1]) for x in aluno['notas'][nota] if nota != 'Comentários'])/div)
+    salvar_aluno(alunos)
+
+
+    return redirect(url_for('scrum_master.index'))
 
 # DEBUG
 

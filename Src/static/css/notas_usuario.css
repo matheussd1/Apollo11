@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    background-color: #185c6e;
+    color: #f4f3f6;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+#avaliar{
+    color: #185c6e;
+    position: absolute;
+    top: 33%;
+    right: 30%;
+}
+
+.não-logado h2 {
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 70vh;
+}
+
+.lista-de-membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: -1%;
+}
+
+.membro {
+    background-color: #f4f3f6;
+    color: #185c6e;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 1%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+    max-width: 25%;
+    max-height: 30%;
+    flex-basis: 45%;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+}
+
+.membro:hover {
+    transform: scale(1.01);
+}
+
+#avaliar {
+    display: block;
+    height: 1%;
+    width: 1%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.membro a {
+    color: #185c6e;
+}
+
+.container a {
+    color: #f4f3f6;
+}
+
+.função {
+    margin-top: -5%;
+}

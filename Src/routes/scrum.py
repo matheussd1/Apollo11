@@ -47,3 +47,7 @@ def finalizar(ra):
         salvar_aluno(membros)
 
     return redirect(url_for('scrum.index'))
+
+@scrum.route('/notas_usuario')
+def notas_usuario():
+    return render_template('notas_usuario.html', dados_usuario = usuario_atual())

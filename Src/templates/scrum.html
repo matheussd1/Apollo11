@@ -17,7 +17,7 @@
     {% else %}
         <section class="container">
 
-            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s) - <a href="{{ url_for('auth.login')}}">Suas Notas</a></h1>   
+            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s) - <a href="{{ url_for('scrum.notas_usuario')}}">Suas Notas</a></h1>   
             <article class="lista-de-membros">
                     {% for membro in equipe.membros %}
                         {% if membro != dados_usuario.ra %}
@@ -25,19 +25,26 @@
                                 <h2>{{pegar_valor(membro, 'nome')}} / {{membro}}</h2> 
                                 <h2 class="função">{{pegar_valor(membro, 'função')}}</h2>
                                 <div class="notas">
-                                    {% for nota in pegar_valor(membro, 'notas')%}
+
+                                    {% for nota in pegar_notas(membro) %}
                                         {% if nota != 'Comentários' %}
-                                            <h3>{{nota}}: 0</h3>
+                                            {% if not pegar_notas(membro).get(nota) is sequence %}
+                                                <h3>{{nota}}: {{pegar_notas(membro).get(nota)}}</h3>
+                                            {% else %}
+                                                <h3>{{nota}}: 0</h3>
+                                            {% endif %}
                                         {% endif %}
                                     {% endfor %}
                                 
                                 {% set notas = [] %}
                                 {% for tipo_nota in pegar_notas(membro).values() %}
-                                        {% for valor in tipo_nota %}
-                                            {% set notas = notas.append(valor[0]) %}
-                                        {% endfor %}
+                                        {% if tipo_nota is sequence %}
+                                            {% for valor in tipo_nota %}
+                                                {% set notas = notas.append(valor[0]) %}
+                                            {% endfor %}
+                                        {% endif %}
                                 {% endfor %}
-                                {% if equipe.avaliação and not dados_usuario.ra in notas%}
+                                {% if equipe.avaliação and not dados_usuario.ra in notas %}
                                     <h3><a href="/scrum/avaliar_membro/{{membro}}" id="avaliar">Avaliar Membro</a></h3>
                                 {% endif %}
                                 </div>

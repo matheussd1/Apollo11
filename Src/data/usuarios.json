@@ -1,267 +1,130 @@
 [
     {
-        "nome": "Caio César dos Santos",
-        "ra": "0001098206411",
+        "nome": "Caio César",
+        "ra": "000",
         "senha": "123",
-        "num_atestados": 1,
-        "atestados": {
-            "atestado_1": {
-                "pdf": "uploads/0001098206411/Atestado 2025-04-28 Karen.pdf",
-                "id": "f1405780-50fe-42ef-89a0-7891ee2cfc6d",
-                "data_criado": "2025-05-03",
-                "status": "Não Verificado",
-                "c_afastamento": "",
-                "f_afastamento": ""
-            }
-        },
-        "equipe": "Cor Leonis",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Apollo 11",
         "função": "Scrum Master",
         "notas": {
-            "Proatividade": [],
-            "Autonomia": [],
-            "Colaboração": [],
-            "Entrega de Resultados": [],
-            "Comentários": []
+            "Proatividade": 3.0,
+            "Autonomia": 3.0,
+            "Colaboração": 3.0,
+            "Entrega de Resultados": 3.0,
+            "Comentários": 0.0
         }
     },
     {
-        "nome": "Tralalero Tralala",
-        "ra": "420",
+        "nome": "João Gabriel",
+        "ra": "111",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Apollo 11",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [
-                [
-                    "0001098206411",
-                    "3"
-                ],
-                [
-                    "666",
-                    "2"
-                ]
-            ],
-            "Autonomia": [
-                [
-                    "0001098206411",
-                    "2"
-                ],
-                [
-                    "666",
-                    "2"
-                ]
-            ],
-            "Colaboração": [
-                [
-                    "0001098206411",
-                    "1"
-                ],
-                [
-                    "666",
-                    "3"
-                ]
-            ],
-            "Entrega de Resultados": [
-                [
-                    "0001098206411",
-                    "2"
-                ],
-                [
-                    "666",
-                    "3"
-                ]
-            ],
-            "Comentários": [
-                [
-                    "0001098206411",
-                    "Ola"
-                ],
-                [
-                    "666",
-                    "ei"
-                ]
-            ]
+            "Proatividade": 1.0,
+            "Autonomia": 2.0,
+            "Colaboração": 2.0,
+            "Entrega de Resultados": 2.0,
+            "Comentários": 0.0
         }
     },
     {
-        "nome": "Miguel Duarte",
-        "ra": "1234",
+        "nome": "Sávio",
+        "ra": "222",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Apollo 11",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [],
-            "Autonomia": [],
-            "Colaboração": [],
-            "Entrega de Resultados": [],
-            "Comentários": []
+            "Proatividade": 1.5,
+            "Autonomia": 1.0,
+            "Colaboração": 2.0,
+            "Entrega de Resultados": 1.5,
+            "Comentários": 0.0
         }
     },
     {
-        "nome": "Bombardiro Crocodilo",
+        "nome": "Bruna",
+        "ra": "333",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Apollo 11",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": 2.0,
+            "Autonomia": 1.5,
+            "Colaboração": 2.0,
+            "Entrega de Resultados": 1.0,
+            "Comentários": 0.0
+        }
+    },
+    {
+        "nome": "Jéssica",
+        "ra": "444",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Apollo 11",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": 2.0,
+            "Autonomia": 1.5,
+            "Colaboração": 2.0,
+            "Entrega de Resultados": 1.5,
+            "Comentários": 0.0
+        }
+    },
+    {
+        "nome": "Isabela",
+        "ra": "555",
+        "senha": "123",
+        "num_atestados": 0,
+        "atestados": {},
+        "equipe": "Apollo 11",
+        "função": "DevTeam",
+        "notas": {
+            "Proatividade": 1.0,
+            "Autonomia": 1.0,
+            "Colaboração": 1.5,
+            "Entrega de Resultados": 1.5,
+            "Comentários": 0.0
+        }
+    },
+    {
+        "nome": "Flávio",
         "ra": "666",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Apollo 11",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Autonomia": [
-                [
-                    "0001098206411",
-                    "2"
-                ]
-            ],
-            "Colaboração": [
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Entrega de Resultados": [
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Comentários": [
-                [
-                    "0001098206411",
-                    ":D"
-                ]
-            ]
+            "Proatividade": 2.0,
+            "Autonomia": 1.0,
+            "Colaboração": 1.5,
+            "Entrega de Resultados": 2.0,
+            "Comentários": 0.0
         }
     },
     {
-        "nome": "João",
-        "ra": "12345",
+        "nome": "Matheus",
+        "ra": "777",
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Apollo 11",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [
-                [
-                    "0001098206411",
-                    "2"
-                ]
-            ],
-            "Autonomia": [
-                [
-                    "0001098206411",
-                    "2"
-                ]
-            ],
-            "Colaboração": [
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Entrega de Resultados": [
-                [
-                    "0001098206411",
-                    "2"
-                ]
-            ],
-            "Comentários": [
-                [
-                    "0001098206411",
-                    "aaaa"
-                ]
-            ]
-        }
-    },
-    {
-        "nome": "Elizabete de Sá Flores Baltazar",
-        "ra": "143",
-        "senha": "123",
-        "num_atestados": 0,
-        "atestados": {},
-        "equipe": "Nenhuma",
-        "função": "DevTeam",
-        "notas": {
-            "Proatividade": [
-                [
-                    "0001098206411",
-                    "0"
-                ],
-                [
-                    "666",
-                    "3"
-                ],
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Autonomia": [
-                [
-                    "0001098206411",
-                    "1"
-                ],
-                [
-                    "666",
-                    "3"
-                ],
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Colaboração": [
-                [
-                    "0001098206411",
-                    "2"
-                ],
-                [
-                    "666",
-                    "3"
-                ],
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Entrega de Resultados": [
-                [
-                    "0001098206411",
-                    "3"
-                ],
-                [
-                    "666",
-                    "3"
-                ],
-                [
-                    "0001098206411",
-                    "3"
-                ]
-            ],
-            "Comentários": [
-                [
-                    "0001098206411",
-                    "muito bom :D"
-                ],
-                [
-                    "666",
-                    "pipipi popopo"
-                ],
-                [
-                    "0001098206411",
-                    "minha vida"
-                ]
-            ]
+            "Proatividade": 1.0,
+            "Autonomia": 1.0,
+            "Colaboração": 1.0,
+            "Entrega de Resultados": 2.0,
+            "Comentários": 0.0
         }
     }
 ]

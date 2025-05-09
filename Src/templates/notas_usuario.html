@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+    {% if dados_usuario.equipe == 'Nenhuma' %}
+        <div class="não-logado">
+            <h1>Avaliação da Equipe Scrum</h1>
+            
+            <h2>Você não está em uma equipe ainda. Aguarde que o Scrum Master da sua equipe te cadastre!</h2>
+        </div>
+    {% else %}
+        <section class="container">
+
+        </section>
+
+    {% endif %}
+{% endblock %}
