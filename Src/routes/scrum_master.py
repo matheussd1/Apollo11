@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app
+from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app, flash
 from utils.helpers import *
 
 scrum_master = Blueprint('scrum_master', __name__)
@@ -117,7 +117,9 @@ def fechar_avaliação():
 
                     div = len(aluno['notas'][nota]) if aluno['notas'][nota] else 1
 
-                    alunos[i]['notas'][nota] = abs(sum([int(x[1]) for x in aluno['notas'][nota] if nota != 'Comentários'])/div)
+                    print("NOTA: ",  nota)
+                    if nota != "Comentários":
+                        alunos[i]['notas'][nota] = abs(sum([int(x[1]) for x in aluno['notas'][nota]])/div)
     salvar_aluno(alunos)
 
 

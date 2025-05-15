@@ -1,23 +1,38 @@
 {% extends 'base.html' %}
 
-
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrum.css') }}">
-{% endblock %}
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/notas_usuario.css') }}">
+{% endblock %}  
 
 {% block body %}
+    <header>
+        <h1>Suas Notas</h1>
+    </header>
+    
+    <section class="container">
+        <article class="input-container">
+                    {% for nota in membro.notas if nota != "Comentários" %}
+                        <div class="critério">
+                            <h2>{{nota}}:</h2>
 
-    {% if dados_usuario.equipe == 'Nenhuma' %}
-        <div class="não-logado">
-            <h1>Avaliação da Equipe Scrum</h1>
-            
-            <h2>Você não está em uma equipe ainda. Aguarde que o Scrum Master da sua equipe te cadastre!</h2>
-        </div>
-    {% else %}
-        <section class="container">
+                            {% if membro.notas.get(nota) is iterable %}
+                                <h2>Notas ainda não fechadas.</h2>
+                                <h2>{{membro.notas.get(nota)}}</h2>
+                            {% else %}
+                                <h2>{{membro.notas.get(nota)}}</h2>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+        </article>
 
-        </section>
+        <article class="comentários">
 
-    {% endif %}
+            {% for comentário in membro.notas.Comentários%}
+            <div class="comentário">
+                <p>{{membro.notas.Comentários[loop.index0][1]}}</p>
+            </div>
+            {% endfor %}
+        </article>
+
+    </section>
 {% endblock %}

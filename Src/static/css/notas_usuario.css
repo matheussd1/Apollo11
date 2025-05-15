@@ -1,79 +1,110 @@
 body, html {
     margin: 0;
-    font-family: "Roboto Slab", serif;
+    font-family: Roboto Slab;
     background-color: #185c6e;
     color: #f4f3f6;
-    justify-content: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
 }
 
-h1 {
-    font-size: 2.2em;
-    text-align: center;
-}
 
-#avaliar{
+.critério {
+    border-radius: 20px;
+    background-color: #f4f3f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #185c6e;
-    position: absolute;
-    top: 33%;
-    right: 30%;
-}
-
-.não-logado h2 {
-    text-align: center;
-}
-
-.container {
-    width: 100vw;
-    height: 70vh;
-}
-
-.lista-de-membros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    margin-top: -1%;
+    height: 16vh;
+    margin: 20px;
 }
 
-.membro {
+.critério h2{
+    font-size: 1.5em;
+    padding: 2% 0 0 2%;
+}
+
+
+.comentários{
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    right: 1%;
+    padding: 3%;
+}
+
+.comentário{
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 100px;
     background-color: #f4f3f6;
     color: #185c6e;
-    padding: 15px;
-    border-radius: 15px;
-    margin: 1%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s;
-    max-width: 25%;
-    max-height: 30%;
-    flex-basis: 45%;
-    box-sizing: border-box;
-    font-family: "Roboto Slab", serif;
-    font-size: large;
-    font-weight: bold;
-    position: relative;
+    border-radius: 20px;
+    font-size: larger;
+    padding: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 3%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.membro:hover {
-    transform: scale(1.01);
+
+p {
+    word-wrap: break-word;
 }
 
-#avaliar {
-    display: block;
-    height: 1%;
-    width: 1%;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.membro a {
+input[type="submit"]{
+    background-color:#f4f3f6;
     color: #185c6e;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    width: 60%;
+    margin-top: 5%;
+    font-size: large;
+    padding: 7px;
+    cursor: pointer;
+    transition-duration: 0.2s;
 }
 
-.container a {
-    color: #f4f3f6;
+input[type='submit']:hover{
+    padding: 10px;
 }
 
-.função {
-    margin-top: -5%;
+input[type="radio"] {
+    margin: 0 5% 3% 2%;
+}
+
+label {
+    font-size: 1.5em;
+    margin-right: 5%;
+}
+
+header{
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: -0.5%;
 }

@@ -1,16 +1,12 @@
 {
-    "Apollo 11": {
-        "num_membros": 8,
+    "Cor Leonis": {
+        "num_membros": 4,
         "avaliação": false,
         "membros": [
             "000",
-            "777",
-            "666",
-            "555",
-            "444",
-            "222",
             "111",
-            "333"
+            "222",
+            "555"
         ]
     }
 }

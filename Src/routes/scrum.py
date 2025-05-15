@@ -50,4 +50,4 @@ def finalizar(ra):
 
 @scrum.route('/notas_usuario')
 def notas_usuario():
-    return render_template('notas_usuario.html', dados_usuario = usuario_atual())
+    return render_template('notas_usuario.html', membro = usuario_atual())
