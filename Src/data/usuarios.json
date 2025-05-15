@@ -53,8 +53,17 @@
         "nome": "Sávio",
         "ra": "222",
         "senha": "123",
-        "num_atestados": 0,
-        "atestados": {},
+        "num_atestados": 1,
+        "atestados": {
+            "atestado_1": {
+                "pdf": "uploads/222/EP1 Python para Zumbis.pdf",
+                "id": "de5104ff-f12d-45ed-a854-1c99c0874b55",
+                "data_criado": "2025-05-15",
+                "status": "Não Verificado",
+                "c_afastamento": "2222-02-22",
+                "f_afastamento": "3333-03-31"
+            }
+        },
         "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {

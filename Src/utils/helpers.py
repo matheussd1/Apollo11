@@ -11,6 +11,14 @@ def pegar_atestado(id):
         if usuario['atestados'][atestado]['id'] == id:
             return atestado
 
+def pegar_usuario(ra):
+    with open(CADASTROS_JSON, encoding='utf-8') as file:
+        cadastros = json.load(file)
+        for usuario in cadastros:
+            if usuario['RA'] == ra:
+                return usuario
+    return {}
+
 
 def salvar_aluno(alunos):
     if not os.path.exists(USUARIOS_JSON):

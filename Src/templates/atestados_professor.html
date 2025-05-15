@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/atestados_professor.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/atestados_professor.css') }}">
 {% endblock %}
 
 {% block body %}
      <nav class="search-container">
-        <form  method="POST" accept-charset="UTF-8">
+        <form action="/atestados_professor/index" method="POST" accept-charset="UTF-8">
             <input type="text" placeholder="Pesquisar Nome/RA" name="Pesquisar">
             <button type="submit"> <i class="fa fa-search"></i></button>
                 
@@ -25,18 +25,30 @@
     
 
     <section class="resultado-pesquisa">
+        {% for usuario in usuarios %}
+            {% for atestado in usuario %}
+                {% if "atestado" in atestado %}
                     <article class="item-pesquisa">
-                        <h3>Nome: Caio César dos Santos</h3>
-                        <h3>RA: 0001098206411 </h3>
-                        <h3>Status:
-                            <a>Deferir</a>
-                            <a>Indeferir</a>
-                        </h3>
-                        <h3>Data de Upload: 18/11/2025 </h3>
-                        <h3>Ínicio do Afastamento: 18/11/2025 </h3>
-                        <h3>Fim do Afastamento: 20/11/2025 </h3>
-                        <a>Abrir PDF</a>
-                        <a>Baixar PDF</a><br>
+                        <h3>Nome: {{ usuario.username }}</h3>
+                        <h3>RA: {{ usuario.RA }}</h3>
+                        {% if usuario[atestado].status == "Não Verificado" %}
+                            <h3>Status:
+                                <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Deferido')}}">Deferir</a>
+                                <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Indeferido')}}">Indeferir</a>
+                            </h3>
+                        {% else %}
+                            <h3>Status: <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Não Verificado')}}">
+                                {{ usuario[atestado].status }}
+                            </a></h3>    
+                        {% endif %}
+                        <h3>Data de Upload: {{ usuario[atestado].data_criado }}</h3>
+                        <h3>Ínicio do Afastamento: {{ usuario[atestado].c_afastamento}} </h3>
+                        <h3>Fim do Afastamento: {{ usuario[atestado].f_afastamento}} </h3>
+                        <a href="{{ url_for('atestados_professor.abrir_atestados', pdf=usuario[atestado].pdf) }}" target="_blank">Abrir PDF</a>
+                        <a href="{{ url_for('atestados_professor.download', id=usuario[atestado].id, ra=usuario.ra) }}">Baixar PDF</a><br>
                     </article>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
     </section>
 {% endblock %}

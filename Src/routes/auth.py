@@ -31,7 +31,7 @@ def login_professor():
         senha = request.form.get('senha')
 
         if senha == current_app.config['SENHA_PROF']:
-            return redirect(url_for('professor.index'))
+            return redirect(url_for('atestados_professor.index'))
         
     return render_template('login_professor.html')
 
