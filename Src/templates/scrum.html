@@ -17,7 +17,11 @@
     {% else %}
         <section class="container">
 
-            <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s) - <a href="{{ url_for('scrum.notas_usuario')}}">Suas Notas</a></h1>   
+            {% if not equipe.avaliação and dados_usuario.notas.get('Proatividade') %}
+                <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s) - <a href="{{ url_for('scrum.notas_usuario')}}">Suas Notas</a></h1>
+            {% else %}
+                <h1>Equipe {{dados_usuario.equipe}} - {{equipe.num_membros}} Integrante(s)</h1>
+            {% endif %}
             <article class="lista-de-membros">
                     {% for membro in equipe.membros %}
                         {% if membro != dados_usuario.ra %}

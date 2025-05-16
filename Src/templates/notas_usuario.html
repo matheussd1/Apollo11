@@ -17,8 +17,7 @@
 
                             {% if membro.notas.get(nota) is iterable %}
                                 <h2>Notas ainda não fechadas.</h2>
-                                <h2>{{membro.notas.get(nota)}}</h2>
-                            {% else %}
+                            {% elif membro.notas.get(nota) != "" %}
                                 <h2>{{membro.notas.get(nota)}}</h2>
                             {% endif %}
                         </div>
@@ -28,9 +27,11 @@
         <article class="comentários">
 
             {% for comentário in membro.notas.Comentários%}
-            <div class="comentário">
-                <p>{{membro.notas.Comentários[loop.index0][1]}}</p>
-            </div>
+                {% if membro.notas.Comentários[loop.index0][1] %}
+                    <div class="comentário">
+                        <p>{{membro.notas.Comentários[loop.index0][1]}}</p>
+                    </div>
+                {% endif %}
             {% endfor %}
         </article>
 

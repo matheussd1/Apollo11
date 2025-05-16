@@ -116,10 +116,8 @@ def fechar_avaliação():
                 for nota in aluno.get('notas'):
 
                     div = len(aluno['notas'][nota]) if aluno['notas'][nota] else 1
-
-                    print("NOTA: ",  nota)
                     if nota != "Comentários":
-                        alunos[i]['notas'][nota] = abs(sum([int(x[1]) for x in aluno['notas'][nota]])/div)
+                        alunos[i]['notas'][nota] = round(sum([int(x[1]) for x in aluno['notas'][nota]])/div, 2)
     salvar_aluno(alunos)
 
 

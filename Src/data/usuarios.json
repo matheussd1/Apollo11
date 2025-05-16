@@ -5,23 +5,14 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
-        "função": "Scrum Master",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
-            "Proatividade": 2.5,
-            "Autonomia": 2.5,
-            "Colaboração": 2.5,
-            "Entrega de Resultados": 2.5,
-            "Comentários": [
-                [
-                    "111",
-                    ""
-                ],
-                [
-                    "555",
-                    "parabeins\r\n"
-                ]
-            ]
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
+            "Comentários": []
         }
     },
     {
@@ -30,21 +21,25 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": 3.0,
-            "Autonomia": 2.0,
-            "Colaboração": 2.5,
-            "Entrega de Resultados": 2.0,
+            "Proatividade": 0.67,
+            "Autonomia": 0.67,
+            "Colaboração": 1.33,
+            "Entrega de Resultados": 1.0,
             "Comentários": [
                 [
                     "000",
-                    "muito bom"
+                    ""
                 ],
                 [
-                    "555",
-                    "caso queira, deixe um comentário sobre joão gabriel"
+                    "222",
+                    "bom"
+                ],
+                [
+                    "333",
+                    ""
                 ]
             ]
         }
@@ -64,27 +59,14 @@
                 "f_afastamento": "3333-03-31"
             }
         },
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": 2.6666666666666665,
-            "Autonomia": 2.0,
-            "Colaboração": 3.0,
-            "Entrega de Resultados": 2.3333333333333335,
-            "Comentários": [
-                [
-                    "000",
-                    "daora"
-                ],
-                [
-                    "111",
-                    "legal"
-                ],
-                [
-                    "555",
-                    "savio savio"
-                ]
-            ]
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
+            "Comentários": []
         }
     },
     {
@@ -96,10 +78,10 @@
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [],
-            "Autonomia": [],
-            "Colaboração": [],
-            "Entrega de Resultados": [],
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
             "Comentários": []
         }
     },
@@ -112,10 +94,10 @@
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [],
-            "Autonomia": [],
-            "Colaboração": [],
-            "Entrega de Resultados": [],
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
             "Comentários": []
         }
     },
@@ -125,23 +107,14 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
-        "função": "Scrum Master",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
-            "Proatividade": 1.5,
-            "Autonomia": 1.0,
-            "Colaboração": 0.5,
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
             "Entrega de Resultados": 0.0,
-            "Comentários": [
-                [
-                    "000",
-                    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                ],
-                [
-                    "111",
-                    "5ttgRFBAHGHSRHBGFDABTESAHsrttnrsyhbwsagheqtghtEGrrhbt"
-                ]
-            ]
+            "Comentários": []
         }
     },
     {
@@ -153,10 +126,10 @@
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [],
-            "Autonomia": [],
-            "Colaboração": [],
-            "Entrega de Resultados": [],
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
             "Comentários": []
         }
     },
@@ -169,36 +142,11 @@
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": [
-                [
-                    "000",
-                    "3"
-                ]
-            ],
-            "Autonomia": [
-                [
-                    "000",
-                    "2"
-                ]
-            ],
-            "Colaboração": [
-                [
-                    "000",
-                    "3"
-                ]
-            ],
-            "Entrega de Resultados": [
-                [
-                    "000",
-                    "3"
-                ]
-            ],
-            "Comentários": [
-                [
-                    "000",
-                    "daora\r\n"
-                ]
-            ]
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
+            "Comentários": []
         }
     }
 ]

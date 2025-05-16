@@ -41,35 +41,40 @@ html {
 
 
 .comentários{
-    max-height: 80vh;
+    min-height: 62vh;
+    max-height: 62vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
     right: 1%;
+    top: 15%;
     padding: 3%;
 }
 
 .comentário{
     min-width: 400px;
     max-width: 400px;
-    min-height: 100px;
+    min-height: 150px;
+    max-height: 150px;
     background-color: #f4f3f6;
     color: #185c6e;
     border-radius: 20px;
     font-size: larger;
-    padding: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 3%;
-    overflow-y: auto;
+    overflow-y: visible;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
 }
 
 
 p {
     word-wrap: break-word;
+    text-align: center;
 }
 
 input[type="submit"]{
