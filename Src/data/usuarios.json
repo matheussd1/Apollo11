@@ -19,8 +19,17 @@
         "nome": "João Gabriel",
         "ra": "111",
         "senha": "123",
-        "num_atestados": 0,
-        "atestados": {},
+        "num_atestados": 1,
+        "atestados": {
+            "atestado_1": {
+                "pdf": "uploads/111/EP1 Python para Zumbis.pdf",
+                "id": "988d4e7f-3ae3-4ce2-b2aa-4bf5a1fb2f65",
+                "data_criado": "2025-05-19",
+                "status": "Deferido",
+                "c_afastamento": "2025-05-19",
+                "f_afastamento": "2025-05-26"
+            }
+        },
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
@@ -54,7 +63,7 @@
                 "pdf": "uploads/222/EP1 Python para Zumbis.pdf",
                 "id": "de5104ff-f12d-45ed-a854-1c99c0874b55",
                 "data_criado": "2025-05-15",
-                "status": "Não Verificado",
+                "status": "Indeferido",
                 "c_afastamento": "2222-02-22",
                 "f_afastamento": "3333-03-31"
             }

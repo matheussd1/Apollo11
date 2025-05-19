@@ -1,4 +1,5 @@
-from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app
+from flask import Blueprint, Flask, redirect, request, render_template, url_for, current_app, send_file
+from io import BytesIO
 from utils.helpers import *
 
 atestados_professor = Blueprint('atestados_professor', __name__)
@@ -10,6 +11,7 @@ def index():
     usuarios = []
     with open(CADASTROS_JSON, 'r', encoding='UTF-8') as file:
         usuarios = json.load(file)
+        
     if request.method == 'POST':
         pesquisa = request.form['Pesquisar']
         classificar = request.form['classificar']
@@ -56,14 +58,13 @@ def verificar(id, ra, status):
             position = i
 
     atestado_atual = ""
-    for atestado in usuario_atual:
-        if 'atestado' in atestado:
-            if usuario_atual[atestado]['id'] != id:
-                continue
-            atestado_atual = atestado
-            break
+    for atestado in usuario_atual.get('atestados'):
+        if usuario_atual.get('atestados')[atestado]['id'] != id:
+            continue
+        atestado_atual = atestado
+        break
     
-    usuarios[position][atestado_atual]['status'] = status
+    usuarios[position].get('atestados')[atestado_atual]['status'] = status
 
     with open(CADASTROS_JSON, 'w', encoding='utf-8') as file:
         json.dump(usuarios, file, indent=4, ensure_ascii=False)

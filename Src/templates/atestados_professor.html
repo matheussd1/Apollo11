@@ -26,28 +26,26 @@
 
     <section class="resultado-pesquisa">
         {% for usuario in usuarios %}
-            {% for atestado in usuario %}
-                {% if "atestado" in atestado %}
-                    <article class="item-pesquisa">
-                        <h3>Nome: {{ usuario.username }}</h3>
-                        <h3>RA: {{ usuario.RA }}</h3>
-                        {% if usuario[atestado].status == "Não Verificado" %}
-                            <h3>Status:
-                                <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Deferido')}}">Deferir</a>
-                                <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Indeferido')}}">Indeferir</a>
-                            </h3>
-                        {% else %}
-                            <h3>Status: <a href="{{ url_for('atestados_professor.verificar', id=usuario[atestado].id, ra=usuario.ra, status='Não Verificado')}}">
-                                {{ usuario[atestado].status }}
-                            </a></h3>    
-                        {% endif %}
-                        <h3>Data de Upload: {{ usuario[atestado].data_criado }}</h3>
-                        <h3>Ínicio do Afastamento: {{ usuario[atestado].c_afastamento}} </h3>
-                        <h3>Fim do Afastamento: {{ usuario[atestado].f_afastamento}} </h3>
-                        <a href="{{ url_for('atestados_professor.abrir_atestados', pdf=usuario[atestado].pdf) }}" target="_blank">Abrir PDF</a>
-                        <a href="{{ url_for('atestados_professor.download', id=usuario[atestado].id, ra=usuario.ra) }}">Baixar PDF</a><br>
+            {% for atestado in usuario.get("atestados") %}
+                <article class="item-pesquisa">
+                    <h3>Nome: {{ usuario.nome }}</h3>
+                    <h3>RA: {{ usuario.ra }}</h3>
+                    {% if usuario.get('atestados').get(atestado).status == "Não Verificado" %}
+                        <h3>Status:
+                            <a href="{{ url_for('atestados_professor.verificar', id=usuario.get('atestados').get(atestado).id, ra=usuario.ra, status='Deferido')}}">Deferir</a>
+                            <a href="{{ url_for('atestados_professor.verificar', id=usuario.get('atestados').get(atestado).id, ra=usuario.ra, status='Indeferido')}}">Indeferir</a>
+                        </h3>
+                    {% else %}
+                        <h3>Status: <a href="{{ url_for('atestados_professor.verificar', id=usuario.get('atestados').get(atestado).id, ra=usuario.ra, status='Não Verificado')}}">
+                            {{ usuario.get('atestados').get(atestado).status }}
+                        </a></h3>    
+                    {% endif %}
+                    <h3>Data de Upload: {{ usuario.get('atestados').get(atestado).data_criado }}</h3>
+                    <h3>Ínicio do Afastamento: {{ usuario.get('atestados').get(atestado).c_afastamento}} </h3>
+                    <h3>Fim do Afastamento: {{ usuario.get('atestados').get(atestado).f_afastamento}} </h3>
+                    <a href="{{ url_for('atestados_professor.abrir_atestados', pdf=usuario.get('atestados').get(atestado).pdf) }}" target="_blank">Abrir PDF</a>
+                    <a href="{{ url_for('atestados_professor.download', id=usuario.get('atestados').get(atestado).id, ra=usuario.ra) }}">Baixar PDF</a><br>
                     </article>
-                {% endif %}
             {% endfor %}
         {% endfor %}
     </section>
