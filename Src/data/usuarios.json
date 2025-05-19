@@ -3,8 +3,17 @@
         "nome": "Caio César",
         "ra": "000",
         "senha": "123",
-        "num_atestados": 0,
-        "atestados": {},
+        "num_atestados": 3,
+        "atestados": {
+            "atestado_3": {
+                "pdf": "uploads/000/Lucas Silva e Pereira (1).pdf",
+                "id": "b6dd4d21-c8ac-4cb7-a5d9-242204b8a752",
+                "data_criado": "19-05-2025",
+                "status": "Não Verificado",
+                "c_afastamento": "15-11-2006",
+                "f_afastamento": "18-10-2006"
+            }
+        },
         "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {

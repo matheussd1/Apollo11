@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 
 atestados_alunos = Blueprint('atestados_alunos', __name__)
 
+def formatar_data(data):
+    return "-".join(data.split('-')[::-1])
 
 @atestados_alunos.route('/atestados_alunos', methods=['POST','GET'])
 def index():
@@ -53,12 +55,14 @@ def enviar():
             else:
                 cadastros[i]['num_atestados'] = 1
 
+            data_criado = str(datetime.now(timezone.utc)).split(' ')[0]
+
             cadastros[i]['atestados'][f'atestado_{usuario['num_atestados']}'] = {'pdf': pdf_path,
                                                                                 'id': str(uuid4()),
-                                                                                'data_criado': str(datetime.now(timezone.utc)).split(' ')[0],
+                                                                                'data_criado': formatar_data(data_criado),
                                                                                 'status': 'Não Verificado',
-                                                                                'c_afastamento': c_afastamento,
-                                                                                'f_afastamento': f_afastamento}
+                                                                                'c_afastamento': formatar_data(c_afastamento),
+                                                                                'f_afastamento': formatar_data(f_afastamento)}
     
     salvar_aluno(cadastros)
     return redirect(url_for('atestados_alunos.index'))
