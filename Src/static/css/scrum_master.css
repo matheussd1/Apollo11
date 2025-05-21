@@ -185,40 +185,47 @@ a{
         font-size: 1.5em;
     }
     .adicionar-membro{
-        width: 40%;
-        height: 15%;
         font-size: small;
     }
     .membro{
         font-size: small;
     }
     .avaliação{
-        font-size: small;
+        font-size: 15px;
     }
 }
 
 @media (max-width:768px){
      h1{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     .avaliação{
-        font-size: smaller;
+        font-size: 15px;
+        left: 0%;
+        bottom: 25%;
    }
    .adicionar-membro{
-        width: 100%;
+        width: 90%;
         height: 15%;
     }
 }
     
 @media (max-width: 480px){
      h1{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     .avaliação{
-        font-size: 10px;
+        font-size: 15px;
+        left: 0%;
+        bottom: 25%;
+
    }
    .adicionar-membro{
-        width: 100%;
+        width: 90%;
         height: 15%;
+        font-size: smaller;
+    }
+    .adicionar-membro label, select {
+        font-size: x-small;
     }
 }
