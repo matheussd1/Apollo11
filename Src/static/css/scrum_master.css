@@ -65,6 +65,8 @@ body, html {
     background-color: #f5f5ee;
 }
 
+/* CSS do add menbros */
+
 h1{
     font-size: 1.8em;
     text-align: center;
@@ -176,4 +178,47 @@ a{
     text-align: center;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media (max-width: 1280px){
+    h1{
+        font-size: 1.5em;
+    }
+    .adicionar-membro{
+        width: 40%;
+        height: 15%;
+        font-size: small;
+    }
+    .membro{
+        font-size: small;
+    }
+    .avaliação{
+        font-size: small;
+    }
+}
+
+@media (max-width:768px){
+     h1{
+        font-size: 1.3em;
+    }
+    .avaliação{
+        font-size: smaller;
+   }
+   .adicionar-membro{
+        width: 100%;
+        height: 15%;
+    }
+}
+    
+@media (max-width: 480px){
+     h1{
+        font-size: 1.2em;
+    }
+    .avaliação{
+        font-size: 10px;
+   }
+   .adicionar-membro{
+        width: 100%;
+        height: 15%;
+    }
 }

@@ -14,8 +14,8 @@
                 "f_afastamento": "18-10-2006"
             }
         },
-        "equipe": "Nenhuma",
-        "função": "DevTeam",
+        "equipe": "ado ado",
+        "função": "Scrum Master",
         "notas": {
             "Proatividade": 0.0,
             "Autonomia": 0.0,
@@ -72,7 +72,7 @@
                 "pdf": "uploads/222/EP1 Python para Zumbis.pdf",
                 "id": "de5104ff-f12d-45ed-a854-1c99c0874b55",
                 "data_criado": "2025-05-15",
-                "status": "Indeferido",
+                "status": "Deferido",
                 "c_afastamento": "2222-02-22",
                 "f_afastamento": "3333-03-31"
             }
@@ -109,7 +109,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "ado ado",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -125,7 +125,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "ado ado",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -141,7 +141,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "ado ado",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -157,7 +157,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "ado ado",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,

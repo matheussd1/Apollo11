@@ -36,3 +36,26 @@ html {
     padding: 12px;
     border-radius: 5px;
 }
+
+@media (max-width: 1280px){
+    .topnav{
+        font-size: medium;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    .topnav{
+        font-size: 10px;
+        width: 100%;
+   
+    }
+}
+    
+@media (max-width: 480px){
+    .topnav{
+        font-size: 8px;
+        width: 100%;
+
+    }
+}
