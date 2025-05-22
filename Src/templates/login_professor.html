@@ -6,14 +6,16 @@
 {% endblock %}
 
 {% block body %}
-    <div class="login-container">
-        <h2>Login professor</h2>
+    <div class="main-content">
+        <div class="login-container">
+            <h2>Login Professor</h2>
 
-        <form action="{{ url_for('auth.login_professor') }}" method="POST">
-            <label for="senha">Senha</label>
-            <input name="senha" id="input_loginpro" type="password" required>
-            <button type="submit" id="but_loginpro">Acessar</button>
-        </form>
-
+            <form action="{{ url_for('auth.login_professor') }}" method="POST">
+                <label for="senha">Senha</label>
+                <input name="senha" id="senha" type="password" required>
+                
+                <input type="submit" value="Acessar">
+            </form>
+        </div>
     </div>
 {% endblock %}

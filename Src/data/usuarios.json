@@ -14,7 +14,7 @@
                 "f_afastamento": "18-10-2006"
             }
         },
-        "equipe": "123",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": [],
@@ -39,8 +39,8 @@
                 "f_afastamento": "2025-05-26"
             }
         },
-        "equipe": "Cor Leonis",
-        "função": "Scrum Master",
+        "equipe": "Nenhuma",
+        "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
             "Autonomia": 0.0,
@@ -64,7 +64,7 @@
                 "f_afastamento": "3333-03-31"
             }
         },
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 2.0,
@@ -97,7 +97,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -113,7 +113,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -129,7 +129,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -145,7 +145,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -161,7 +161,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Cor Leonis",
+        "equipe": "Nenhuma",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
