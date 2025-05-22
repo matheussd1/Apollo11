@@ -1,12 +1,14 @@
 body, html {
     margin: 0;
+    padding: 0; 
     font-family: Roboto Slab;
     background-color: #185c6e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: #f4f3f6;
+    height: auto; 
+    min-height: 100vh; 
+    overflow-y: scroll !important; 
+
+
 }
 
 
@@ -14,19 +16,30 @@ body, html {
     border-radius: 20px;
     background-color: #f4f3f6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 3%;
+    margin: 3% auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #185c6e;
     width: 90vw;
-    height: 80vh;
+    max-width: 1000px;
+    height: auto;
+    
 }
 
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+}
+
+input[type="file"],
+input[type="date"],
+input[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
 }
 
 .container .atestados {
@@ -66,11 +79,20 @@ table {
     border: 2px solid #185c6e;
     border-radius: 4px;
     padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    
+    
 }
 
 th, td {
     padding: 10px 18px;
     font-size: medium;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 90%;
 }
 
 
@@ -100,4 +122,53 @@ a {
     max-height: 50vh;
     overflow-y: auto;
     overflow-x: hidden;
+    
 } 
+
+
+.tabela-atestados {
+    border: 2px solid #185c6e;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin: 0 auto; 
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95vw;
+        height: auto;
+        padding: 10px;
+    }
+
+    .atestados h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+    .upload-input::file-selector-button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .tabela-atestados {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .tabela-atestados th, .tabela-atestados td {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
