@@ -8,15 +8,23 @@ body, html {
 }
 
 h1 {
-    font-size: 2.2em;
+    font-size: 1.5em;
     text-align: center;
 }
 
-#avaliar{
+h2, h3 {
+    margin: 0.5em 0;
+}
+
+#avaliar {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
     color: #185c6e;
-    position: absolute;
-    top: 33%;
-    right: 30%;
+    margin-top: 1rem;
+    position: static;
+    width: auto;
+    height: auto;
 }
 
 .não-logado h2 {
@@ -24,8 +32,10 @@ h1 {
 }
 
 .container {
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .lista-de-membros {
@@ -41,12 +51,11 @@ h1 {
     color: #185c6e;
     padding: 15px;
     border-radius: 15px;
-    margin: 1%;
+    margin: 5% 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s;
-    max-width: 25%;
-    max-height: 30%;
-    flex-basis: 45%;
+    max-width: 100%;
+    flex-basis: 100%;
     box-sizing: border-box;
     font-family: "Roboto Slab", serif;
     font-size: large;
@@ -58,14 +67,6 @@ h1 {
     transform: scale(1.01);
 }
 
-#avaliar {
-    display: block;
-    height: 1%;
-    width: 1%;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .membro a {
     color: #185c6e;
 }
@@ -75,5 +76,45 @@ h1 {
 }
 
 .função {
-    margin-top: -5%;
+    margin-top: 0;
+}
+
+
+/* Tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .membro {
+        max-width: 45%;
+        flex-basis: 45%;
+        margin: 2%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #avaliar {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        margin-top: 0;
+    }
+}
+
+/* Telas grandes (acima de 1024px) */
+@media (min-width: 1025px) {
+    .membro {
+        max-width: 25%;
+        flex-basis: 22%;
+        margin: 1%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    #avaliar {
+        position: absolute;
+        top: 33%;
+        right: 30%;
+    }
 }
