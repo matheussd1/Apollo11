@@ -116,7 +116,7 @@ def fechar_avaliação():
                 for nota in aluno.get('notas'):
 
                     div = len(aluno['notas'][nota]) if aluno['notas'][nota] else 1
-                    if nota != "Comentários":
+                    if nota != "Comentários" and type(aluno['notas'][nota]) != float:
                         alunos[i]['notas'][nota] = round(sum([int(x[1]) for x in aluno['notas'][nota]])/div, 2)
     salvar_aluno(alunos)
 

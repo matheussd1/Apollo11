@@ -1,13 +1,22 @@
 {
-    "ado ado": {
-        "num_membros": 5,
+    "123": {
+        "num_membros": 1,
         "avaliação": false,
         "membros": [
-            "000",
-            "777",
-            "555",
+            "000"
+        ]
+    },
+    "Cor Leonis": {
+        "num_membros": 7,
+        "avaliação": false,
+        "membros": [
+            "111",
+            "222",
             "666",
-            "444"
+            "777",
+            "333",
+            "444",
+            "555"
         ]
     }
 }

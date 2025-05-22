@@ -14,13 +14,13 @@
                 "f_afastamento": "18-10-2006"
             }
         },
-        "equipe": "ado ado",
-        "função": "Scrum Master",
+        "equipe": "123",
+        "função": "DevTeam",
         "notas": {
-            "Proatividade": 0.0,
-            "Autonomia": 0.0,
-            "Colaboração": 0.0,
-            "Entrega de Resultados": 0.0,
+            "Proatividade": [],
+            "Autonomia": [],
+            "Colaboração": [],
+            "Entrega de Resultados": [],
             "Comentários": []
         }
     },
@@ -34,32 +34,19 @@
                 "pdf": "uploads/111/EP1 Python para Zumbis.pdf",
                 "id": "988d4e7f-3ae3-4ce2-b2aa-4bf5a1fb2f65",
                 "data_criado": "2025-05-19",
-                "status": "Deferido",
+                "status": "Não Verificado",
                 "c_afastamento": "2025-05-19",
                 "f_afastamento": "2025-05-26"
             }
         },
-        "equipe": "Nenhuma",
-        "função": "DevTeam",
+        "equipe": "Cor Leonis",
+        "função": "Scrum Master",
         "notas": {
-            "Proatividade": 0.67,
-            "Autonomia": 0.67,
-            "Colaboração": 1.33,
-            "Entrega de Resultados": 1.0,
-            "Comentários": [
-                [
-                    "000",
-                    ""
-                ],
-                [
-                    "222",
-                    "bom"
-                ],
-                [
-                    "333",
-                    ""
-                ]
-            ]
+            "Proatividade": 0.0,
+            "Autonomia": 0.0,
+            "Colaboração": 0.0,
+            "Entrega de Resultados": 0.0,
+            "Comentários": []
         }
     },
     {
@@ -77,14 +64,31 @@
                 "f_afastamento": "3333-03-31"
             }
         },
-        "equipe": "Nenhuma",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
-            "Proatividade": 0.0,
-            "Autonomia": 0.0,
-            "Colaboração": 0.0,
-            "Entrega de Resultados": 0.0,
-            "Comentários": []
+            "Proatividade": 2.0,
+            "Autonomia": 1.5,
+            "Colaboração": 2.0,
+            "Entrega de Resultados": 1.75,
+            "Comentários": [
+                [
+                    "111",
+                    "caso querira"
+                ],
+                [
+                    "333",
+                    "bom"
+                ],
+                [
+                    "444",
+                    "caso queira, deixe um comentário sobre sávio"
+                ],
+                [
+                    "555",
+                    ":D"
+                ]
+            ]
         }
     },
     {
@@ -93,7 +97,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "Nenhuma",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -109,7 +113,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "ado ado",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -125,7 +129,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "ado ado",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -141,7 +145,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "ado ado",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
@@ -157,7 +161,7 @@
         "senha": "123",
         "num_atestados": 0,
         "atestados": {},
-        "equipe": "ado ado",
+        "equipe": "Cor Leonis",
         "função": "DevTeam",
         "notas": {
             "Proatividade": 0.0,
