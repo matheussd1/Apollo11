@@ -1,12 +1,12 @@
 body, html {
     margin: 0;
+    padding: 0;
     font-family: Roboto Slab;
     background-color: #185c6e;
     display: flex;
     flex-direction: column;
-    justify-content: center;   
     align-items: center;
-    color: #f4f3f6;
+    min-height: 100vh;
 }
 
 
@@ -57,4 +57,34 @@ body, html {
     background-color: #f4f3f6;
     color: #185c6e;
     padding: 14px 12px;
+}
+
+@media (max-width: 768px) {
+    .cadastro {
+        width: 70vw;              
+        margin-top: 20%;           
+        padding: 1rem;             
+    }
+
+    .cadastro h1 {
+        font-size: 1.2rem;         
+        text-align: center;
+    }
+
+    .cadastro h3 {
+        font-size: 0.95rem;        
+        margin-bottom: 0.3rem;
+    }
+
+    .cadastro form input[type=password],
+    .cadastro form input[type=text],
+    .cadastro form input[type=submit] {
+        width: 85%;                    
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .cadastro form input[type=submit] {
+        padding: 10px;
+    }
 }
