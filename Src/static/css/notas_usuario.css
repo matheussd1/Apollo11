@@ -3,6 +3,7 @@ body, html {
     font-family: Roboto Slab, serif;
     background-color: #185c6e;
     color: #f4f3f6;
+    max-width: 100vw;
 }
 
 /* Oculta scrollbar */
@@ -55,7 +56,6 @@ h1 {
 
 .comentários {
     max-height: 70vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -98,3 +98,38 @@ label {
     font-size: 1.2em;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-container{
+        width: 100%;
+    }
+
+    .comentários {
+
+        max-height: none;
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .comentário {
+        max-width: 100%;
+        font-size: 1em;
+    }
+
+    .critério {
+        height: auto;
+    }
+
+    .critério h2 {
+        font-size: 1.2em;
+    }
+}
+

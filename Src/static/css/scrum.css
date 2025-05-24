@@ -23,7 +23,7 @@ h2, h3 {
     color: #185c6e;
     margin-top: 1rem;
     position: static;
-    width: auto;
+    width: 10%;
     height: auto;
 }
 
@@ -118,3 +118,4 @@ h2, h3 {
         right: 30%;
     }
 }
+

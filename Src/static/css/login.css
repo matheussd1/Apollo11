@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* para garantir espaço lateral no mobile */
+    padding: 5%; /* para garantir espaço lateral no mobile */
 }
 
 /* Bloco do login */
@@ -84,4 +84,10 @@ a {
     font-weight: bold;
     margin-left: 5px;
     text-decoration: none;
+}
+
+@media (max-width: 728px) {
+    .main-content{
+        margin-bottom: 50%;
+    }
 }

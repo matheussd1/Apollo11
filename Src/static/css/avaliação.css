@@ -96,3 +96,43 @@ h1 {
     font-size: 2.2em;
     margin-bottom: -0.5%;
 }
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+
+    header > h1, .critério > h2{
+        font-size: 1.2em;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .critério {
+        width: 90%;
+        height: 16vh;
+        margin: 20px;
+    }
+
+    .critério * {
+        text-align: center;
+    }
+    
+    .comentários-submit{
+        height: 300px;
+    }
+
+    textarea{
+        width: 80%;
+        height: 200px;
+        background-color: #f4f3f6;
+        color: #185c6e;
+        border-radius: 20px;
+        font-size: larger;
+        padding: 7px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+

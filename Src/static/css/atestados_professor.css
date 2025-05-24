@@ -3,6 +3,7 @@ body, html {
     font-family: Roboto Slab;
     background-color: #185c6e;
     color: #f4f3f6;
+    max-width: 100vw;
 }
 
 
@@ -40,21 +41,21 @@ h3, .item-pesquisa a{
     margin: 10px;
 }
 
+#pesquisa{
+    display: flex;
+}
+
 input[type="text"]{
     border-radius: 20px;
     padding: 10px;
-    width: 20%;
+    width: 100%;
     font-size: medium;
     font-weight: 700;
     color:#185c6e;
     padding-left: 20px;
     background-color: #f4f3f6;
-    transition-duration: 0.3s;
 }
 
-input[type="text"]:hover{
-    width: 40%;
-}
 
 form{
     display: flex;
@@ -82,7 +83,7 @@ label{
 select, option{
     border-radius: 10px;
     padding: 5px;
-    width: 20%;
+    width: 55%;
     font-size: medium;
     font-weight: 700;
     color:#185c6e;
@@ -92,4 +93,33 @@ select, option{
 
 select:focus{
     border: none;
+}
+
+@media (max-width: 728px){
+    .resultado-pesquisa{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-pesquisa{
+        min-width: unset;
+        min-height: 34vh;
+
+        max-width: 90vw;
+        max-height: 38vh;
+    }
+
+    .search-container > form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pesquisa > input[type="text"]{
+        width: 90%;
+    }
+
+    option{
+        width: 100vw;
+    }
+
 }

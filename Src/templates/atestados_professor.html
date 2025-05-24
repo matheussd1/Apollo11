@@ -6,19 +6,22 @@
 {% endblock %}
 
 {% block body %}
-     <nav class="search-container">
+    <nav class="search-container">
         <form action="/atestados_professor/index" method="POST" accept-charset="UTF-8">
-            <input type="text" placeholder="Pesquisar Nome/RA" name="Pesquisar">
-            <button type="submit"> <i class="fa fa-search"></i></button>
-                
-            <label for="classificar">Classificar por:</label>
-            <select name="classificar">
-                <option value="upload">Data de Upload</option>
-                <option value="i_afastamento">Ínicio do Afastamento</option>
-                <option value="f_afastamento">Fim do Afastamento</option>
-                <option value="alfabetica">Ordem Alfabética</option>
+            <div id="pesquisa">
+                <input type="text" placeholder="Pesquisar Nome/RA" name="Pesquisar">
+                <button type="submit"> <i class="fa fa-search"></i></button>
+            </div>
 
-            </select>
+            <div id="classificação">
+                <label for="classificar">Classificar por:</label>
+                <select name="classificar">
+                    <option value="upload">Data de Upload</option>
+                    <option value="i_afastamento">Ínicio do Afastamento</option>
+                    <option value="f_afastamento">Fim do Afastamento</option>
+                    <option value="alfabetica">Ordem Alfabética</option>
+                </select>
+            </div>
 
         </form>
     </nav>
