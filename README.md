@@ -36,7 +36,7 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
 <br>
 
 ## 🏆**MVP**
-![imgage alt](https://github.com/matheussd1/Apollo11/blob/main/Documents/img/MVP_2.jpg?raw=true)
+![imgage alt](https://github.com/matheussd1/Apollo11/blob/main/Documents/img/MVP_3.jpg?raw=true)
 1. Wireframe: [Protótipo navegável](https://www.figma.com/design/snwp3uCdIYLKA9mw0Ymj7B/login?node-id=0-1&t=PVu3Mg1vIH0n0J8Y-1)
 2. Web Site Sprint 01: [Versão atual](Documents/video)
 3. Web Site Sprint 02: https://youtu.be/gwc2gSKfA3g 
@@ -105,32 +105,32 @@ Com as tarefas já planejadas, estimamos o tempo necessário para cada uma delas
         <td> Alta </td>
         <td> Como professor, quero ter uma área para acessar os atestados enviados por alunos </td>
         <td> 3 </td>
-        <td> 🕓 </td>
-        <td>  </td>
+        <td> ✅ </td>
+        <td> 25/05 </td>
     </tr>
     </tr>
         <td> 8 </td>
         <td> Alta </td>
         <td> Como professor quero selecionar um botão para validar atestados de alunos </td>
         <td> 3 </td>
-        <td> 🕓 </td>
-        <td>  </td>
+        <td> ✅ </td>
+        <td> 25/05 </td>
     </tr>
     </tr>
         <td> 9 </td>
         <td> Alta </td>
         <td> Como professor, eu gostaria de ter uma área para buscar alunos por nome completo ou RA </td>
         <td> 3 </td>
-        <td> 🕓 </td>
-        <td>  </td>
+        <td> ✅ </td>
+        <td> 25/05 </td>
     </tr>
     </tr>
         <td> 10 </td>
         <td> Média </td>
         <td> Como aluno gostaria de avaliar os membros da equipe de forma individual (na forma de classificação numérica) e também poder escrever comentários sobre o desempenho de forma individual  </td>
         <td> 3 </td>
-        <td> 🕓 </td>
-        <td>  </td>
+        <td> ✅ </td>
+        <td> 25/05 </td>
     </tr>
         
 </table>
